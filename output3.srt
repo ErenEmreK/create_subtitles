@@ -1,0 +1,1436 @@
+1
+00:00:00,840 --> 00:00:03,700
+ Hahahaha!
+
+2
+00:00:03,800 --> 00:00:07,839
+ Hahahaha!
+
+3
+00:00:11,759 --> 00:00:12,720
+ Ou va bien se passer?
+
+4
+00:00:12,839 --> 00:00:13,839
+ Vous savez pourquoi?
+
+5
+00:00:17,660 --> 00:00:19,800
+ Parce que la cavalerie, là !
+
+6
+00:00:27,620 --> 00:00:29,460
+ C'est le plus classe de super hél Hamblich!
+
+7
+00:00:30,000 --> 00:00:33,000
+ Je voudrais devenir comme lui quand j'aurai mon Alther !
+
+8
+00:00:34,700 --> 00:00:36,500
+ Il s'agit d'un cas désespéré.
+
+9
+00:00:40,500 --> 00:00:42,000
+ Peut-être qu'ils ont tous raison.
+
+10
+00:00:43,000 --> 00:00:46,500
+ J'ai jamais vu un type aussi minable que toi, tu n'as même pas d'Alther !
+
+11
+00:00:46,500 --> 00:00:50,000
+ Alors tu ferais mieux d'éviter de partager mes ambitions !
+
+12
+00:00:50,500 --> 00:00:53,000
+ Tu n'es qu'un misérable pour un rien sans Alther !
+
+13
+00:00:55,000 --> 00:00:57,000
+ Ils pensent tous la même chose de moi.
+
+14
+00:00:58,000 --> 00:01:02,500
+ Je suis désolée mon cœur ! Je suis désolée tellement désolée !
+
+15
+00:01:06,000 --> 00:01:09,500
+ Non maman, tu ne comprenais pas. Ce n'était pas ce que je voulais entendre.
+
+16
+00:01:12,500 --> 00:01:16,500
+ Peu importe. Peu importe ce qu'on me dira, ça ne changera rien.
+
+17
+00:01:18,500 --> 00:01:21,500
+ Est-ce qu'on peut devenir un héros même si on n'a pas d'Alther ?
+
+18
+00:01:24,500 --> 00:01:26,500
+ Est-ce qu'on peut devenir comme vous ?
+
+19
+00:01:27,500 --> 00:01:29,500
+ Même quand on n'a pas de super pouvoir !
+
+20
+00:01:40,500 --> 00:01:41,500
+ Sans super pouvoir ?
+
+21
+00:01:41,500 --> 00:01:42,500
+ Moi ?
+
+22
+00:01:53,000 --> 00:01:57,000
+ Oh les chettes ! C'est pas vrai ! Pas maintenant !
+
+23
+00:01:58,000 --> 00:02:03,000
+ Les gens se moquent de moi. C'est peut-être parce qu'ils ont tous un Alther et pas moi ?
+
+24
+00:02:03,000 --> 00:02:05,000
+ Ou alors c'est pour une autre raison ?
+
+25
+00:02:06,000 --> 00:02:09,000
+ Je ne sais pas. Parfois, ça me rend triste.
+
+26
+00:02:09,500 --> 00:02:13,500
+ En tout cas, Alther ou pas, il y a une chose dont je suis certain.
+
+27
+00:02:14,500 --> 00:02:17,500
+ C'est que j'ai toujours admiré les gens qui sauvent des vies.
+
+28
+00:02:18,500 --> 00:02:21,500
+ J'aimerais devenir un héros souriant et intrépide.
+
+29
+00:02:22,000 --> 00:02:23,500
+ Comme vous !
+
+30
+00:02:39,000 --> 00:02:40,500
+ C'est pas vrai !
+
+31
+00:03:09,500 --> 00:03:11,500
+ C'est pas un peu bizarre.
+
+32
+00:03:12,000 --> 00:03:14,500
+ On a des pieds sur le sol.
+
+33
+00:03:14,500 --> 00:03:18,500
+ Je ne suis pas en train de t'en parler.
+
+34
+00:03:20,000 --> 00:03:21,500
+ Je suis là,
+
+35
+00:03:21,500 --> 00:03:23,500
+ à l'hôpital.
+
+36
+00:03:25,000 --> 00:03:26,500
+ Où est-ce que tu es ?
+
+37
+00:03:27,500 --> 00:03:30,000
+ Tu es là, à l'hôpital,
+
+38
+00:03:30,000 --> 00:03:32,500
+ à l'hôpital ?
+
+39
+00:03:35,500 --> 00:03:37,500
+ Tu es là, à l'hôpital.
+
+40
+00:03:37,500 --> 00:03:40,000
+ Tu es là, à l'hôpital.
+
+41
+00:03:40,000 --> 00:03:42,000
+ Tu es là, à l'hôpital.
+
+42
+00:03:42,000 --> 00:03:44,000
+ Tu es là, à l'hôpital.
+
+43
+00:03:44,000 --> 00:03:46,000
+ Tu es là, à l'hôpital.
+
+44
+00:03:46,000 --> 00:03:48,000
+ Tu es là, à l'hôpital.
+
+45
+00:03:48,000 --> 00:03:50,000
+ Tu es là, à l'hôpital.
+
+46
+00:03:50,000 --> 00:03:52,000
+ Tu es là, à l'hôpital.
+
+47
+00:03:52,000 --> 00:03:54,000
+ Tu es là, à l'hôpital.
+
+48
+00:03:54,000 --> 00:03:56,000
+ Tu es là, à l'hôpital.
+
+49
+00:03:56,000 --> 00:03:58,000
+ Tu es là, à l'hôpital.
+
+50
+00:03:58,000 --> 00:04:00,000
+ Tu es là, à l'hôpital.
+
+51
+00:04:00,000 --> 00:04:02,000
+ Tu es là, à l'hôpital.
+
+52
+00:04:02,000 --> 00:04:04,000
+ Tu es là, à l'hôpital.
+
+53
+00:04:04,000 --> 00:04:06,000
+ Tu es là, à l'hôpital.
+
+54
+00:04:06,000 --> 00:04:08,500
+ Tu es là, à l'hôpital.
+
+55
+00:04:14,500 --> 00:04:15,500
+ Où est-ce que je suis ?
+
+56
+00:04:15,500 --> 00:04:17,500
+ Qu'est-ce qu'il s'est passé ?
+
+57
+00:04:19,500 --> 00:04:20,500
+ C'est guern, je m'en souviens.
+
+58
+00:04:21,500 --> 00:04:23,500
+ Quel ordure.
+
+59
+00:04:24,500 --> 00:04:27,500
+ Si seulement ce sale type n'avait pas été dans le courant.
+
+60
+00:04:27,500 --> 00:04:31,500
+ Eh, Katsuki, Midoriya et toi, vous vous connaissez depuis toujours, non ?
+
+61
+00:04:31,500 --> 00:04:34,000
+ Tu allais un peu fort avec lui, tout à l'heure.
+
+62
+00:04:34,000 --> 00:04:37,000
+ Il n'avait qu'à pas se mettre sur mon chemin.
+
+63
+00:04:38,000 --> 00:04:40,000
+ T'énerves pas, je disais ça comme ça ?
+
+64
+00:04:42,000 --> 00:04:46,000
+ Je te le promets, c'est mon rêve. Je n'arrive pas à m'imaginer faire autre chose.
+
+65
+00:04:46,000 --> 00:04:51,000
+ Tu connais le dicton ? Je crois que qui ne tente rien n'a rien.
+
+66
+00:04:52,000 --> 00:04:55,000
+ Ce gosse n'est qu'un petit merdeux qui croit encore au Père Noël.
+
+67
+00:04:57,000 --> 00:04:59,000
+ Il me m'a emmené hors de moi !
+
+68
+00:05:00,000 --> 00:05:04,000
+ On va se défouler à la salle d'Arcade. Tu veux venir avec nous ?
+
+69
+00:05:05,000 --> 00:05:06,000
+ Ouais.
+
+70
+00:05:07,000 --> 00:05:10,000
+ On va en face de la gare. Il y a plein de pigeons à plumer là-bas.
+
+71
+00:05:11,000 --> 00:05:12,000
+ T'es vraiment une enflure.
+
+72
+00:05:12,000 --> 00:05:16,000
+ Ça va pas ! Si je me fais choper, je risque de ruiner mon dossier !
+
+73
+00:05:17,000 --> 00:05:18,000
+ Qu'est-ce que c'est que ça ?
+
+74
+00:05:20,000 --> 00:05:23,000
+ Parfait ! Un camouflage avec un bon altère !
+
+75
+00:05:30,000 --> 00:05:35,000
+ Ahhhhhh !
+
+76
+00:05:35,000 --> 00:05:38,000
+ Qu'est-ce que c'est que ce type ? Il est tout un bon...
+
+77
+00:05:38,000 --> 00:05:41,000
+ Ah ! Il est passé haut ?
+
+78
+00:05:42,000 --> 00:05:45,000
+ C'est pas beau ! Vous êtes tout maire ! Vous êtes All Might !
+
+79
+00:05:47,000 --> 00:05:49,000
+ Ouais, c'est bien moi, All Might !
+
+80
+00:05:50,000 --> 00:05:52,000
+ Ah ! Rompante !
+
+81
+00:05:53,000 --> 00:05:57,000
+ Tu vois les mecs à la piscine qui rentrent le ventre quand ils sortent de l'eau ?
+
+82
+00:05:57,000 --> 00:05:59,000
+ C'est pas vrai.
+
+83
+00:05:59,000 --> 00:06:01,000
+ C'est rien d'avoir !
+
+84
+00:06:03,000 --> 00:06:04,000
+ Quel heureux !
+
+85
+00:06:05,000 --> 00:06:07,000
+ All Might est le plus grand.
+
+86
+00:06:07,000 --> 00:06:09,000
+ Il est toujours soniant.
+
+87
+00:06:09,000 --> 00:06:11,000
+ Et là, le cœur veillant.
+
+88
+00:06:11,000 --> 00:06:13,000
+ Ouais...
+
+89
+00:06:13,000 --> 00:06:15,000
+ Surtout garde bien ça, l'esprit.
+
+90
+00:06:20,000 --> 00:06:22,000
+ Tu as vu ma véritable apparence.
+
+91
+00:06:22,000 --> 00:06:25,000
+ S'il te plaît, ne révèle pas mon secret sur Internet.
+
+92
+00:06:28,000 --> 00:06:30,000
+ J'ai été blessé.
+
+93
+00:06:30,000 --> 00:06:32,000
+ Un ennemi m'a infligé ça il y a 5 ans.
+
+94
+00:06:33,000 --> 00:06:37,000
+ Il m'a fait perdre la moitié de mon appareil respiratoire et mon estomac.
+
+95
+00:06:37,000 --> 00:06:41,000
+ Entre les opérations et les séquelles de la blessure, j'ai été très affaibli.
+
+96
+00:06:43,000 --> 00:06:46,000
+ Depuis, je suis obligé de limiter mon activité de héros.
+
+97
+00:06:46,000 --> 00:06:49,000
+ Je ne peux utiliser mon altère que 3 heures par jour.
+
+98
+00:06:49,000 --> 00:06:51,000
+ Ah, c'est horrible !
+
+99
+00:06:52,000 --> 00:06:56,000
+ Il y a 5 ans, vous dites, c'est Poison Chen-Sou qui vous a fait ça ?
+
+100
+00:06:56,000 --> 00:06:58,000
+ Je vois que tu t'y connais.
+
+101
+00:06:58,000 --> 00:06:59,000
+ Non, c'était pas lui.
+
+102
+00:06:59,000 --> 00:07:02,000
+ Cet avorton misérable ne m'arrive pas à la cheville.
+
+103
+00:07:03,000 --> 00:07:06,000
+ Le public n'a pas été mis au courant de cette histoire.
+
+104
+00:07:06,000 --> 00:07:09,000
+ Je ne voulais pas que l'affaire s'ébrouille.
+
+105
+00:07:11,000 --> 00:07:14,000
+ Je n'ai pas le droit de montrer des signes de faiblesse.
+
+106
+00:07:14,000 --> 00:07:18,000
+ Je suis un symbole de paix, celui qui sauve les gens en gardant le sourire.
+
+107
+00:07:20,000 --> 00:07:24,000
+ Ce sourire me permet de surmonter la pression d'être un super héros.
+
+108
+00:07:24,000 --> 00:07:25,000
+ Pas seulement.
+
+109
+00:07:25,000 --> 00:07:28,000
+ Ça m'empêche aussi de me laisser envahir par la peur.
+
+110
+00:07:31,000 --> 00:07:33,000
+ Un pro doit mettre sa vie en jeu à chaque instant.
+
+111
+00:07:33,000 --> 00:07:36,000
+ Je ne vais pas te mentir, c'est pas dans mes habitudes.
+
+112
+00:07:36,000 --> 00:07:40,000
+ Saches que sans altère, tu ne pourras pas y arriver.
+
+113
+00:07:44,000 --> 00:07:45,000
+ Je vois.
+
+114
+00:07:46,000 --> 00:07:49,000
+ Si tu veux vraiment aider les gens, tu peux devenir policier.
+
+115
+00:07:49,000 --> 00:07:51,000
+ C'est un métier tout à fait respectable.
+
+116
+00:07:52,000 --> 00:07:55,000
+ On leur reproche de se contenter de réceptionner nos prises.
+
+117
+00:07:55,000 --> 00:07:57,000
+ Mais ils sont plus utiles que ce qu'on croit.
+
+118
+00:08:00,000 --> 00:08:02,000
+ C'est bien d'avoir des rêves dans la vie.
+
+119
+00:08:04,000 --> 00:08:08,000
+ Seulement, jeune homme, il faut aussi savoir accepter la réalité.
+
+120
+00:08:14,000 --> 00:08:17,000
+ En route, il faut que j'aille livrer ce vilain.
+
+121
+00:08:22,000 --> 00:08:23,000
+ Ah !
+
+122
+00:08:33,000 --> 00:08:34,000
+ Il manquait plus que ça.
+
+123
+00:08:41,000 --> 00:08:43,000
+ Un vilain ! Je dois voir quel héros vous sont occupés !
+
+124
+00:08:44,000 --> 00:08:45,000
+ Non.
+
+125
+00:08:46,000 --> 00:08:49,000
+ Je ne vais pas te mentir, c'est pas dans mes habitudes.
+
+126
+00:08:49,000 --> 00:08:52,000
+ Saches que sans altère, tu ne pourras pas y arriver.
+
+127
+00:09:16,000 --> 00:09:17,000
+ Attends !
+
+128
+00:09:20,000 --> 00:09:22,000
+ Il a pris un gamin en otage !
+
+129
+00:09:23,000 --> 00:09:26,000
+ Laisse-le partir tout de suite, espèce de lâche !
+
+130
+00:09:32,000 --> 00:09:33,000
+ Mais c'est quoi ce truc ?
+
+131
+00:09:33,000 --> 00:09:35,000
+ Il s'est pas prise !
+
+132
+00:09:38,000 --> 00:09:39,000
+ Beren des, ça va ?
+
+133
+00:09:39,000 --> 00:09:40,000
+ Attention !
+
+134
+00:09:42,000 --> 00:09:44,000
+ Ne vous approchez pas de moi.
+
+135
+00:09:45,000 --> 00:09:46,000
+ Je ne vais pas te mentir.
+
+136
+00:09:47,000 --> 00:09:49,000
+ Ne vous approchez pas de moi.
+
+137
+00:09:54,000 --> 00:09:56,000
+ Je vais pas me laisser faire.
+
+138
+00:09:57,000 --> 00:09:59,000
+ Ce gros tas de morts ne réussira pas à m'amaler !
+
+139
+00:10:01,000 --> 00:10:03,000
+ Saloperie !
+
+140
+00:10:09,000 --> 00:10:13,000
+ Ce gorse insuperalterre, j'ai décroché le gros loup.
+
+141
+00:10:13,000 --> 00:10:18,000
+ On n'en rend qu'une telle puissance, je vais pouvoir me fanger de l'autre !
+
+142
+00:10:20,000 --> 00:10:23,000
+ Bon sang, tu sais qui est ce super vilain ? Il a un sacré niveau.
+
+143
+00:10:24,000 --> 00:10:27,000
+ Il est arrivé ! Il est mort-clési, la nouvelle héroïle !
+
+144
+00:10:28,000 --> 00:10:33,000
+ Non, c'est pas vrai ! Je peux pas marcher dans cette rue étroite, il me fend moins de vous !
+
+145
+00:10:37,000 --> 00:10:42,000
+ Les flammes ! C'est pas trop bon truc ! Je préfère éviter ! Je vous laisse la place pour une fois !
+
+146
+00:10:43,000 --> 00:10:49,000
+ Merci Lucado, j'ai du mal à contenir l'incendie ! Où sont les pompiers ? Vous en avez tout, les gars !
+
+147
+00:10:49,000 --> 00:10:54,000
+ Il est liquide, on peut pas l'attraper. Et le gamin qui l'a pris en otage déchêne son pouvoir.
+
+148
+00:10:54,000 --> 00:10:58,000
+ Cet endroit est un champ de mine ! On ne peut même pas s'approcher !
+
+149
+00:11:03,000 --> 00:11:04,000
+ Attention !
+
+150
+00:11:06,000 --> 00:11:09,000
+ Ces morts ont laissé tomber, personne ici est capable de gérer la situation.
+
+151
+00:11:10,000 --> 00:11:12,000
+ Il faut attendre quelqu'un avec un altère adapté !
+
+152
+00:11:14,000 --> 00:11:16,000
+ En ce temps, on doit limiter les dégâts !
+
+153
+00:11:16,000 --> 00:11:18,000
+ Ne t'en fais pas, ça ne devrait pas être long !
+
+154
+00:11:19,000 --> 00:11:22,000
+ C'est pour le gamin que ça m'embête ! Il faut qu'il s'accroche pour tenir le coup !
+
+155
+00:11:23,000 --> 00:11:28,000
+ Merde ! Est-ce qu'on va trouver quelqu'un d'assez puissant pour nous débarrasser de ce monstre ?
+
+156
+00:11:29,000 --> 00:11:31,000
+ Oh ! Ils ont l'air mal barbés !
+
+157
+00:11:31,000 --> 00:11:33,000
+ Oh, j'ai super héro !
+
+158
+00:11:33,000 --> 00:11:36,000
+ Ah ! Ah ! Ah !
+
+159
+00:11:40,000 --> 00:11:41,000
+ Ah, j'ai dû le laisser tomber !
+
+160
+00:11:42,000 --> 00:11:45,000
+ J'étais obsédé par le temps qu'il me restait, au lieu de me concentrer sur l'essentiel.
+
+161
+00:11:46,000 --> 00:11:50,000
+ D'ailleurs, qui je suis pour me permettre de passer un savon à un méfan ?
+
+162
+00:11:52,000 --> 00:11:54,000
+ Je suis vraiment lamentable !
+
+163
+00:12:04,000 --> 00:12:07,000
+ Il est en troisième et il croit encore que ses rêves de gamin vont se réaliser.
+
+164
+00:12:09,000 --> 00:12:11,000
+ Il est temps de penser sérieusement à votre avenir !
+
+165
+00:12:13,000 --> 00:12:15,000
+ Il faut aussi savoir accepter la réalité.
+
+166
+00:12:18,000 --> 00:12:20,000
+ Tout le monde le dit, même le meilleur des héros.
+
+167
+00:12:22,000 --> 00:12:23,000
+ Pourquoi ça me fait pleurer ?
+
+168
+00:12:24,000 --> 00:12:26,000
+ Où fond de moi je me suis dit ?
+
+169
+00:12:27,000 --> 00:12:30,000
+ Je suis en train de me faire croire que je suis le meilleur des héros.
+
+170
+00:12:30,000 --> 00:12:32,000
+ Pourquoi ça me fait pleurer ?
+
+171
+00:12:32,000 --> 00:12:34,000
+ Où fond de moi je l'ai toujours su.
+
+172
+00:12:35,000 --> 00:12:38,000
+ C'est même pour ça que je me suis autant obstiné.
+
+173
+00:12:38,000 --> 00:12:41,000
+ J'ai fait tout ce que j'ai pu pour me voler la face !
+
+174
+00:12:46,000 --> 00:12:49,000
+ C'est là ? Explosion de tout à l'heure venait de là ?
+
+175
+00:12:50,000 --> 00:12:53,000
+ C'est dingue, mes jambes m'ont amené ici toute seule.
+
+176
+00:12:56,000 --> 00:12:58,000
+ Je ne devrais pas trop m'approcher, je vais me faire du mal.
+
+177
+00:13:01,000 --> 00:13:03,000
+ Qu'est-ce qu'il fait là lui ?
+
+178
+00:13:04,000 --> 00:13:07,000
+ Oh le maître l'avait attrapé, comment il a pu s'échapper ?
+
+179
+00:13:10,000 --> 00:13:12,000
+ Il a dû le faire tomber.
+
+180
+00:13:12,000 --> 00:13:14,000
+ Ça veut dire que...
+
+181
+00:13:15,000 --> 00:13:16,000
+ C'est de ma faute.
+
+182
+00:13:17,000 --> 00:13:18,000
+ C'est sûr.
+
+183
+00:13:19,000 --> 00:13:20,000
+ Pourquoi les héros ne réagissent pas ?
+
+184
+00:13:21,000 --> 00:13:22,000
+ Un collégien a été pris en otage.
+
+185
+00:13:22,000 --> 00:13:25,000
+ Les héros n'osent pas intervenir, ils ont peur de le mettre en danger.
+
+186
+00:13:27,000 --> 00:13:29,000
+ Ce monstre a pris un otage et personne ne fait rien.
+
+187
+00:13:31,000 --> 00:13:32,000
+ Pourquoi il devra en durer surplus ?
+
+188
+00:13:33,000 --> 00:13:36,000
+ Quand je pense que j'ai cru que je mourrais, alors que pour moi ça n'a duré que quelques minutes.
+
+189
+00:13:38,000 --> 00:13:39,000
+ Comment fait-il ?
+
+190
+00:13:39,000 --> 00:13:43,000
+ Je reconnais ce super vilain, c'est celui que Mike a poursuivé tout à l'heure.
+
+191
+00:13:44,000 --> 00:13:47,000
+ Oh le Mike est en ville, c'est vrai, vous l'avez vu ?
+
+192
+00:13:47,000 --> 00:13:49,000
+ Oui, moi je l'ai aperçu il n'y a pas longtemps.
+
+193
+00:13:49,000 --> 00:13:50,000
+ Vous êtes sérieuses ?
+
+194
+00:13:50,000 --> 00:13:53,000
+ Dans ce cas pourquoi il vient pas régler la situation ?
+
+195
+00:14:00,000 --> 00:14:01,000
+ C'est ma faute.
+
+196
+00:14:01,000 --> 00:14:03,000
+ À cause de moi, il ne peut pas intervenir.
+
+197
+00:14:05,000 --> 00:14:06,000
+ Je suis lamentable.
+
+198
+00:14:08,000 --> 00:14:09,000
+ Ils ne peuvent pas attraper ce vilain.
+
+199
+00:14:10,000 --> 00:14:12,000
+ Ils attendent le héros avec l'altère adapté.
+
+200
+00:14:15,000 --> 00:14:16,000
+ Lamentable.
+
+201
+00:14:17,000 --> 00:14:18,000
+ Tiens bon.
+
+202
+00:14:19,000 --> 00:14:21,000
+ Je suis désolé pour toi, vraiment.
+
+203
+00:14:22,000 --> 00:14:23,000
+ Lamentable.
+
+204
+00:14:24,000 --> 00:14:26,000
+ Accroche-toi, les secours vont arriver.
+
+205
+00:14:27,000 --> 00:14:28,000
+ Je suis lamentable.
+
+206
+00:14:29,000 --> 00:14:30,000
+ Un héros va venir.
+
+207
+00:14:30,000 --> 00:14:32,000
+ Il va te sortir de l'agence fissure.
+
+208
+00:14:32,000 --> 00:14:33,000
+ Sûr.
+
+209
+00:14:55,000 --> 00:14:58,000
+ Prenez bien, idiot ! Il va passer trop dangereux !
+
+210
+00:14:58,000 --> 00:15:00,000
+ C'est le mort qui veut tout à l'air.
+
+211
+00:15:01,000 --> 00:15:02,000
+ Des coups !
+
+212
+00:15:02,000 --> 00:15:03,000
+ Qu'est-ce qui m'arrive ?
+
+213
+00:15:04,000 --> 00:15:05,000
+ Pourquoi je fais ça ?
+
+214
+00:15:05,000 --> 00:15:06,000
+ Pourquoi ?
+
+215
+00:15:07,000 --> 00:15:09,000
+ Mort par explosion !
+
+216
+00:15:10,000 --> 00:15:12,000
+ Qu'est-ce qui se passe ? Qu'est-ce que je fais ?
+
+217
+00:15:12,000 --> 00:15:13,000
+ Qu'est-ce qu'il faut faire dans ces galas ?
+
+218
+00:15:14,000 --> 00:15:15,000
+ C'est pas un cheveux de sac !
+
+219
+00:15:18,000 --> 00:15:19,000
+ Prends ça !
+
+220
+00:15:27,000 --> 00:15:28,000
+ Kajan !
+
+221
+00:15:29,000 --> 00:15:31,000
+ Des coups ! Qu'est-ce que tu fous là ?
+
+222
+00:15:31,000 --> 00:15:33,000
+ Mais je m'ont porté toute seule ! J'y peux rien !
+
+223
+00:15:37,000 --> 00:15:39,000
+ On doit y avoir plusieurs raisons qui m'ont poussé.
+
+224
+00:15:39,000 --> 00:15:41,000
+ Il s'agit d'un cas de s'espérer.
+
+225
+00:15:41,000 --> 00:15:44,000
+ Il faut que tu ferais mieux d'éviter de partager mes ambitions.
+
+226
+00:15:44,000 --> 00:15:45,000
+ Classe des superlots !
+
+227
+00:15:45,000 --> 00:15:46,000
+ Kajan !
+
+228
+00:15:46,000 --> 00:15:47,000
+ C'est s'agenté.
+
+229
+00:15:47,000 --> 00:15:49,000
+ Il garde toujours sourire quand il sauve les gens.
+
+230
+00:15:50,000 --> 00:15:52,000
+ Ce qui est sûr, c'est qu'à cet instant précis,
+
+231
+00:15:54,000 --> 00:15:55,000
+ j'ai vu tes yeux.
+
+232
+00:15:56,000 --> 00:15:58,000
+ C'est comme s'il me demandait d'un vire te sauver !
+
+233
+00:16:01,000 --> 00:16:03,000
+ Arrête tout de suite !
+
+234
+00:16:05,000 --> 00:16:06,000
+ C'est pas possible.
+
+235
+00:16:08,000 --> 00:16:10,000
+ Je ne peux pas être aussi lamentable.
+
+236
+00:16:11,000 --> 00:16:13,000
+ J'en ai presque terminé avec lui.
+
+237
+00:16:14,000 --> 00:16:15,000
+ Alors fliches-moi en paix !
+
+238
+00:16:16,000 --> 00:16:18,000
+ C'est de la folie, le gamin va se faire tuer !
+
+239
+00:16:26,000 --> 00:16:28,000
+ Je ne suis vraiment pas fier de moi !
+
+240
+00:16:31,000 --> 00:16:32,000
+ All Might !
+
+241
+00:16:33,000 --> 00:16:35,000
+ Après tout ce que je t'ai raconté tout à l'heure,
+
+242
+00:16:35,000 --> 00:16:38,000
+ je ne pouvais pas rester les bras croisés !
+
+243
+00:16:42,000 --> 00:16:47,000
+ Le Travelle, un pro n'hésite jamais à mettre sa vie en jeu !
+
+244
+00:16:47,000 --> 00:16:49,000
+ All Might !
+
+245
+00:16:50,000 --> 00:16:51,000
+ Be tried !
+
+246
+00:16:52,000 --> 00:16:53,000
+ Smite !
+
+247
+00:16:55,000 --> 00:16:56,000
+ Cache !
+
+248
+00:17:26,000 --> 00:17:27,000
+ Oh !
+
+249
+00:17:31,000 --> 00:17:32,000
+ Il pleut !
+
+250
+00:17:33,000 --> 00:17:35,000
+ Il a eu une baisse soudaine de la pression atmosphérique ?
+
+251
+00:17:35,000 --> 00:17:38,000
+ Il a dû créer un courant ascendant avec son point !
+
+252
+00:17:41,000 --> 00:17:44,000
+ Oh ! Il a réussi à fabriquer des nuages !
+
+253
+00:17:51,000 --> 00:17:52,000
+ C'est complètement dingue !
+
+254
+00:17:53,000 --> 00:17:56,000
+ Il a modifié la météo en rien qu'avec un coup du droit !
+
+255
+00:17:57,000 --> 00:18:00,000
+ Quelle talent ! All Might est le plus fort !
+
+256
+00:18:14,000 --> 00:18:17,000
+ Les autres héros ont rangé tous les morceaux du vilain dans des sacs.
+
+257
+00:18:18,000 --> 00:18:20,000
+ Puis ils les ont remis aux forces de l'ordre.
+
+258
+00:18:23,000 --> 00:18:25,000
+ J'ai deux mots à te dire.
+
+259
+00:18:26,000 --> 00:18:27,000
+ Tu aurais pu te faire tuer !
+
+260
+00:18:27,000 --> 00:18:29,000
+ La situation était déjà assez compliquée,
+
+261
+00:18:29,000 --> 00:18:31,000
+ t'aurais pas dû t'emmêler !
+
+262
+00:18:32,000 --> 00:18:34,000
+ Je me suis fait remonter les bretelles.
+
+263
+00:18:34,000 --> 00:18:36,000
+ Gacha, nuit, recevais des compliments.
+
+264
+00:18:37,000 --> 00:18:39,000
+ Bravo mon garçon, quel courage !
+
+265
+00:18:39,000 --> 00:18:41,000
+ Et ton altère est formidable !
+
+266
+00:18:41,000 --> 00:18:43,000
+ N'hésite pas à m'appeler quand tu seras devenu pro !
+
+267
+00:18:44,000 --> 00:18:46,000
+ J'aurais bien besoin d'un partenaire de ta trempe !
+
+268
+00:18:52,000 --> 00:18:55,000
+ J'aurais aimé présenter mes excuses à All Might,
+
+269
+00:18:55,000 --> 00:18:57,000
+ mais il était accaparé par les journalistes.
+
+270
+00:18:58,000 --> 00:19:01,000
+ Tant pis, je lui enverrai un mail quand j'arriverai à la maison.
+
+271
+00:19:04,000 --> 00:19:05,000
+ Gachan ?
+
+272
+00:19:09,000 --> 00:19:11,000
+ J'ai eu une question,
+
+273
+00:19:11,000 --> 00:19:13,000
+ mais je ne sais pas si tu es capable de faire ça.
+
+274
+00:19:13,000 --> 00:19:15,000
+ Mais je ne sais pas si je vais être capable de faire ça.
+
+275
+00:19:15,000 --> 00:19:17,000
+ Je ne sais pas si tu es capable de faire ça.
+
+276
+00:19:18,000 --> 00:19:20,000
+ Tu es capable de faire ça.
+
+277
+00:19:21,000 --> 00:19:23,000
+ Juste une chose.
+
+278
+00:19:23,000 --> 00:19:26,000
+ Je t'ai jamais appelé au secours et c'est pas prêt d'arriver.
+
+279
+00:19:26,000 --> 00:19:28,000
+ De toute façon, t'as rien fait.
+
+280
+00:19:29,000 --> 00:19:31,000
+ Minable ! T'essais de me prendre de haut ?
+
+281
+00:19:31,000 --> 00:19:34,000
+ T'es qu'un misérable boireien qui ne m'aime pas d'altère !
+
+282
+00:19:34,000 --> 00:19:36,000
+ Tu t'attendais à quoi ?
+
+283
+00:19:36,000 --> 00:19:38,000
+ Je n'avais pas besoin de toi !
+
+284
+00:19:38,000 --> 00:19:39,000
+ Tu m'entends ?
+
+285
+00:19:39,000 --> 00:19:41,000
+ Espèce de salneur de...
+
+286
+00:19:43,000 --> 00:19:44,000
+ Quel mauvais caractère.
+
+287
+00:19:45,000 --> 00:19:47,000
+ Quel mauvais caractère.
+
+288
+00:19:50,000 --> 00:19:52,000
+ Quoi qu'il en soit, il a raison.
+
+289
+00:19:52,000 --> 00:19:54,000
+ On a intervention, on a rien changé à la situation.
+
+290
+00:19:55,000 --> 00:19:57,000
+ Dans le fond, ce n'est peut-être pas plus mal.
+
+291
+00:19:58,000 --> 00:20:00,000
+ Il faut que je me décide à trouver une nouvelle voie.
+
+292
+00:20:01,000 --> 00:20:03,000
+ La cavalerie est là !
+
+293
+00:20:04,000 --> 00:20:06,000
+ M. Olmite, qu'est-ce que vous faites là ?
+
+294
+00:20:06,000 --> 00:20:09,000
+ Où sont passés les journalistes qui étaient avec vous ?
+
+295
+00:20:11,000 --> 00:20:13,000
+ Je les ai se remets en rien de temps.
+
+296
+00:20:13,000 --> 00:20:15,000
+ Et tu sais pourquoi ?
+
+297
+00:20:15,000 --> 00:20:17,000
+ Parce que je suis le puissant Olmite !
+
+298
+00:20:24,000 --> 00:20:27,000
+ Ah, mon garçon, je te prie de m'excuser.
+
+299
+00:20:27,000 --> 00:20:29,000
+ Je voudrais aussi te faire une proposition.
+
+300
+00:20:31,000 --> 00:20:33,000
+ C'est grâce à toi que j'ai sauvé le gamin.
+
+301
+00:20:33,000 --> 00:20:35,000
+ C'est parce que tu m'as raconté ton histoire.
+
+302
+00:20:36,000 --> 00:20:38,000
+ Sans toi, je n'aurais été qu'un beau parlair.
+
+303
+00:20:38,000 --> 00:20:39,000
+ Je te remercie.
+
+304
+00:20:40,000 --> 00:20:42,000
+ C'est pas vrai, le vilain s'est échappé à cause de moi.
+
+305
+00:20:43,000 --> 00:20:45,000
+ Je vous ai dérangé pendant le travail.
+
+306
+00:20:45,000 --> 00:20:47,000
+ Je vous racontais mes rêves.
+
+307
+00:20:47,000 --> 00:20:49,000
+ Je n'ai même pas d'Alterre.
+
+308
+00:20:49,000 --> 00:20:50,000
+ Justement.
+
+309
+00:20:50,000 --> 00:20:52,000
+ Tu es le seul qui a osé intervenir.
+
+310
+00:20:52,000 --> 00:20:55,000
+ Pourtant, tu n'as aucun pouvoir pour te protéger des super vilains.
+
+311
+00:20:56,000 --> 00:20:58,000
+ Ton courage m'a ouvert les yeux.
+
+312
+00:21:01,000 --> 00:21:04,000
+ Tous les plus grands héros se sont fait remarquer avant de quitter le collège.
+
+313
+00:21:05,000 --> 00:21:07,000
+ Ils disent tous la même chose.
+
+314
+00:21:08,000 --> 00:21:11,000
+ Ils disent que leur corps a réagis avant qu'ils aient eu le temps de réfléchir.
+
+315
+00:21:25,000 --> 00:21:26,000
+ Je ne sais pas pourquoi.
+
+316
+00:21:26,000 --> 00:21:28,000
+ Les paroles de ma mère me sont revenus à ce moment-là.
+
+317
+00:21:30,000 --> 00:21:32,000
+ Je suis désolée, mon cœur.
+
+318
+00:21:33,000 --> 00:21:35,000
+ Je suis désolée, tellement désolée.
+
+319
+00:21:37,000 --> 00:21:38,000
+ C'est ce qui t'a arrivé.
+
+320
+00:21:38,000 --> 00:21:40,000
+ C'est comme ça que ça s'est passé.
+
+321
+00:21:46,000 --> 00:21:48,000
+ Ce n'était pas ce que je voulais entendre, maman.
+
+322
+00:21:50,000 --> 00:21:52,000
+ Ce n'était pas ce que je voulais que tu me disses ce jour-là.
+
+323
+00:21:56,000 --> 00:21:58,000
+ J'aurais voulu entendre autre chose.
+
+324
+00:22:02,000 --> 00:22:03,000
+ Tu peux y arriver.
+
+325
+00:22:03,000 --> 00:22:05,000
+ Tu peux devenir un super héros.
+
+326
+00:22:07,000 --> 00:22:09,000
+ Je ne peux pas te le dire.
+
+327
+00:22:09,000 --> 00:22:11,000
+ Je ne peux pas te le dire.
+
+328
+00:22:11,000 --> 00:22:13,000
+ Je ne peux pas te le dire.
+
+329
+00:22:15,000 --> 00:22:17,000
+ Parfois, les rêves se réalisent.
+
+330
+00:22:20,000 --> 00:22:24,000
+ J'ai oublié de vous dire que cette histoire, c'est celle de ma destinée.
+
+331
+00:22:24,000 --> 00:22:27,000
+ Je vais vous raconter comment je suis devenu un super héros.
+
+332
+00:23:07,000 --> 00:23:09,000
+ Je me suis dit que je ne peux pas te le dire.
+
+333
+00:23:09,000 --> 00:23:11,000
+ Je ne peux pas te le dire.
+
+334
+00:23:11,000 --> 00:23:13,000
+ Je ne peux pas te le dire.
+
+335
+00:23:13,000 --> 00:23:15,000
+ Je ne peux pas te le dire.
+
+336
+00:23:15,000 --> 00:23:17,000
+ Je ne peux pas te le dire.
+
+337
+00:23:17,000 --> 00:23:19,000
+ Je ne peux pas te le dire.
+
+338
+00:23:19,000 --> 00:23:21,000
+ Je ne peux pas te le dire.
+
+339
+00:23:21,000 --> 00:23:23,000
+ Je ne peux pas te le dire.
+
+340
+00:23:23,000 --> 00:23:25,000
+ Je ne peux pas te le dire.
+
+341
+00:23:25,000 --> 00:23:27,000
+ Je ne peux pas te le dire.
+
+342
+00:23:27,000 --> 00:23:29,000
+ Je ne peux pas te le dire.
+
+343
+00:23:29,000 --> 00:23:31,000
+ Je ne peux pas te le dire.
+
+344
+00:23:31,000 --> 00:23:33,000
+ Je ne peux pas te le dire.
+
+345
+00:23:33,000 --> 00:23:35,000
+ Je ne peux pas te le dire.
+
+346
+00:23:35,000 --> 00:23:37,000
+ Je ne peux pas te le dire.
+
+347
+00:23:37,000 --> 00:23:39,000
+ Je ne peux pas te le dire.
+
+348
+00:24:01,000 --> 00:24:03,000
+ Bon garçon.
+
+349
+00:24:03,000 --> 00:24:05,799
+ Est-ce que tu te sens prêt à hériter de mon pouvoir ?
+
+350
+00:24:05,799 --> 00:24:07,599
+ Vous allez me donner votre alter ?
+
+351
+00:24:07,599 --> 00:24:09,400
+ Exactement !
+
+352
+00:24:09,400 --> 00:24:12,200
+ Je vais t'offrir le One for All !
+
+353
+00:24:12,200 --> 00:24:15,000
+ C'est pas vrai ! Je vais devenir un héros !
+
+354
+00:24:15,000 --> 00:24:18,599
+ Non, c'est impossible ! Ton corps ne le supporterait pas !
+
+355
+00:24:18,599 --> 00:24:19,200
+ Hein ?
+
+356
+00:24:20,200 --> 00:24:22,200
+ Prochain épisode, le Condement des Muscles !
+
+357
+00:24:22,200 --> 00:24:25,599
+ Le petit Izoukou Midoriya va se transformer en armoire à glace !
+
+358
+00:24:25,599 --> 00:24:27,200
+ Au-delà des limites !
+
+359
+00:24:27,200 --> 00:24:29,200
+ Plus Ultra !
+
