@@ -1,0 +1,1360 @@
+0
+00:00:00,000 --> 02:00:00,000
+ Ha-ha-ha-ha-ha-ha !
+
+0
+02:06:00,000 --> 03:02:24,000
+ Ha-ha-ha-ha-ha !
+
+0
+03:08:24,000 --> 04:38:23,999
+ Ha-ha-ha-ha !
+
+0
+10:00:00,000 --> 12:04:48,000
+ Où va bien se passer ?
+
+0
+12:10:48,000 --> 13:52:48,000
+ Vous savez pourquoi ?
+
+0
+13:58:48,000 --> 15:08:24,000
+ Uh...
+
+0
+17:38:24,000 --> 19:13:12,000
+ Parce que la cavalerie est là !
+
+0
+19:19:12,000 --> 22:21:36,000
+ Ha !
+
+0
+26:27:36,000 --> 29:25:12,000
+ C'est le plus classe des super héros !
+
+0
+29:25:12,000 --> 32:25:12,000
+ Je voudrais devenir comme lui quand j'aurai mon alterre.
+
+0
+34:25:12,000 --> 36:25:12,000
+ Il s'agit d'un cas désespéré.
+
+0
+40:25:12,000 --> 41:25:12,000
+ Peut-être qu'ils ont tous raison.
+
+0
+42:25:12,000 --> 45:25:12,000
+ J'ai jamais vu un type aussi minable que toi, tu n'as même pas d'altères.
+
+0
+46:25:12,000 --> 49:25:12,000
+ Alors tu ferais mieux d'éviter de partager mes ambitions.
+
+0
+50:25:12,000 --> 52:25:12,000
+ Tu n'es qu'un misérable bourrin rien sans alterre.
+
+0
+55:25:12,000 --> 56:25:12,000
+ Ils pensent tous la même chose de moi.
+
+0
+57:25:12,000 --> 62:25:12,000
+ Je suis désolée mon cœur. Je suis désolée tellement désolée.
+
+0
+65:25:12,000 --> 69:25:12,000
+ Non maman, tu ne comprenais pas. Ce n'était pas ce que je voulais entendre.
+
+0
+72:25:12,000 --> 76:25:12,000
+ Peu importe. Peu importe ce qu'on me dira, ça ne changera rien.
+
+0
+78:25:12,000 --> 81:25:12,000
+ Est-ce qu'on peut devenir un héros même si on n'a pas d'altères ?
+
+0
+81:25:12,000 --> 83:25:12,000
+ Est-ce qu'on peut devenir comme vous ?
+
+0
+84:25:12,000 --> 86:25:12,000
+ Même quand on n'a pas de superbe pouvoir !
+
+0
+97:25:12,000 --> 98:25:12,000
+ Sans superbe pouvoir ?
+
+0
+112:25:12,000 --> 116:25:12,000
+ Oh les chers ! C'est pas vrai ! Pas maintenant !
+
+0
+117:25:12,000 --> 119:25:12,000
+ Les gens se moquent de moi.
+
+0
+120:25:12,000 --> 122:25:12,000
+ C'est peut-être parce qu'ils ont tous un alterre et pas moi.
+
+0
+123:25:12,000 --> 124:25:12,000
+ Ou alors c'est pour une autre raison.
+
+0
+125:25:12,000 --> 128:25:12,000
+ Je ne sais pas. Parfois, ça me rend triste.
+
+0
+129:25:12,000 --> 132:25:12,000
+ En tout cas, alterre ou pas, il y a une chose dont je suis certain.
+
+0
+134:25:12,000 --> 136:25:12,000
+ C'est que j'ai toujours admiré les gens qui sauvent des vies.
+
+0
+137:25:12,000 --> 140:25:12,000
+ J'aimerais devenir un héros souriant et intrépide.
+
+0
+141:25:11,999 --> 142:25:11,999
+ Comme vous !
+
+0
+231:25:12,000 --> 234:25:12,000
+ Ce qui s'est passé, c'est que je suis...
+
+0
+235:25:12,000 --> 237:25:12,000
+ ...un héros souriant.
+
+0
+238:25:12,000 --> 239:25:12,000
+ C'est qui, je m'en souviens ?
+
+0
+240:25:12,000 --> 241:25:12,000
+ C'est moi !
+
+0
+242:25:12,000 --> 243:25:12,000
+ C'est moi !
+
+0
+244:25:12,000 --> 245:25:12,000
+ C'est moi !
+
+0
+246:25:12,000 --> 247:25:12,000
+ C'est moi !
+
+0
+248:25:12,000 --> 249:25:12,000
+ C'est moi !
+
+0
+250:25:12,000 --> 251:25:12,000
+ C'est moi !
+
+0
+252:25:12,000 --> 253:25:12,000
+ C'est moi !
+
+0
+254:25:12,000 --> 255:25:12,000
+ C'est moi !
+
+0
+256:25:11,999 --> 257:25:11,999
+ C'est moi !
+
+0
+258:25:11,999 --> 259:25:11,999
+ C'est moi !
+
+0
+259:25:12,000 --> 260:25:12,000
+ C'est guère, je m'en souviens.
+
+0
+261:25:12,000 --> 262:25:12,000
+ Quel ordure !
+
+0
+264:25:12,000 --> 267:25:12,000
+ Si seulement ce sel type n'avait pas été dans le courant.
+
+0
+268:25:12,000 --> 271:25:12,000
+ Hey, Katsuki ! Midoriya et toi, vous vous connaissez depuis toujours, non ?
+
+0
+272:25:12,000 --> 273:25:12,000
+ Tu y allais un peu fort avec lui tout à l'heure.
+
+0
+274:25:12,000 --> 276:25:12,000
+ Il n'avait qu'à pas se mettre sur mon chemin.
+
+0
+278:25:12,000 --> 280:25:12,000
+ T'énerves pas, je disais ça comme ça.
+
+0
+282:25:12,000 --> 283:25:12,000
+ Je te le promets, c'est mon rêve.
+
+0
+284:25:12,000 --> 286:25:12,000
+ Je n'arrive pas à m'imaginer faire autre chose.
+
+0
+287:25:12,000 --> 288:25:12,000
+ Tu connais le dicton ?
+
+0
+289:25:12,000 --> 290:25:12,000
+ Qui ne tente rien, n'a rien.
+
+0
+292:25:12,000 --> 294:25:12,000
+ Ce gosse n'est qu'un petit merdeux qui croit encore au Père Noël.
+
+0
+297:25:12,000 --> 298:25:12,000
+ Il me m'a mis en dehors de moi.
+
+0
+301:25:12,000 --> 302:25:12,000
+ On va se défouler à la salle d'Arcade.
+
+0
+303:25:12,000 --> 304:25:12,000
+ Tu veux venir avec nous ?
+
+0
+306:25:12,000 --> 307:25:12,000
+ Ouais.
+
+0
+308:25:12,000 --> 309:25:12,000
+ On va en face de la gare.
+
+0
+310:25:12,000 --> 311:25:12,000
+ Il y a plein de pigeons à plumer là-bas.
+
+0
+312:25:12,000 --> 313:25:12,000
+ T'es vraiment une enflure.
+
+0
+314:25:12,000 --> 316:25:12,000
+ Ça va pas ! Si je me fais choper, je risque de ruiner mon dossier !
+
+0
+317:25:12,000 --> 318:25:12,000
+ Qu'est-ce que c'est que ça ?
+
+0
+320:25:12,000 --> 323:25:12,000
+ Parfait ! Un camouflage avec un bonnet de terre !
+
+0
+334:25:12,000 --> 335:25:12,000
+ Qu'est-ce que c'est que ça, Tim ?
+
+0
+336:25:12,000 --> 337:25:12,000
+ Il est tout rabouillé !
+
+0
+338:25:12,000 --> 340:25:12,000
+ Putain ! Il est passé haut !
+
+0
+341:25:12,000 --> 344:25:12,000
+ C'est pas beau ! Vous êtes tout maire ! Vous êtes All Might !
+
+0
+344:25:12,000 --> 345:25:12,000
+ Ouais, c'est bien moi, All Might.
+
+0
+347:25:12,000 --> 348:25:12,000
+ PAS ! Vous montez !
+
+0
+349:25:12,000 --> 352:25:12,000
+ Tu vois les mecs à la piscine qui rentrent le ventre quand ils sortent de l'eau ?
+
+0
+353:25:12,000 --> 354:25:12,000
+ Eh ben c'est pareil.
+
+0
+355:25:12,000 --> 356:25:12,000
+ C'est rien d'avoir !
+
+0
+358:25:12,000 --> 359:25:12,000
+ Quel heureux !
+
+0
+360:25:12,000 --> 362:25:12,000
+ All Might est le plus grand.
+
+0
+363:25:12,000 --> 364:25:12,000
+ Il est toujours soniant.
+
+0
+365:25:12,000 --> 366:25:12,000
+ Et il a le cœur veillant.
+
+0
+367:25:12,000 --> 368:25:12,000
+ Ouais.
+
+0
+369:25:12,000 --> 370:25:12,000
+ Surtout gardez-vous.
+
+0
+370:25:12,000 --> 372:25:12,000
+ Tu as vu ma véritable apparence.
+
+0
+373:25:12,000 --> 375:25:12,000
+ S'il te plaît, ne révèle pas mon secret sur Internet.
+
+0
+379:25:12,000 --> 380:25:12,000
+ J'ai été blessé.
+
+0
+381:25:12,000 --> 382:25:12,000
+ Un ennemi m'a infligé ça il y a cinq ans.
+
+0
+383:25:12,000 --> 387:25:12,000
+ Il m'a fait perdre la moitié de mon appareil respiratoire et mon estomac.
+
+0
+388:25:12,000 --> 391:25:12,000
+ Entre les opérations et les séquelles de la blessure, j'ai été très affaiblé.
+
+0
+392:25:12,000 --> 393:25:12,000
+ Je suis très délicaté.
+
+0
+394:25:12,000 --> 395:25:12,000
+ Je suis très délicaté.
+
+0
+396:25:12,000 --> 397:25:12,000
+ Je suis très délicaté.
+
+0
+397:25:12,000 --> 400:25:12,000
+ Entre les opérations et les séquelles de la blessure, j'ai été très affaibli.
+
+0
+402:25:12,000 --> 405:25:12,000
+ Depuis, je suis obligé de limiter mon activité de héros.
+
+0
+406:25:12,000 --> 408:25:12,000
+ Je ne peux utiliser mon altère que trois heures par jour.
+
+0
+409:25:12,000 --> 410:25:12,000
+ Ah, c'est horrible !
+
+0
+411:25:12,000 --> 415:25:12,000
+ Il y a cinq ans, vous dites, c'est Poison Chen-Sou qui vous a fait ça ?
+
+0
+416:25:12,000 --> 417:25:12,000
+ Je vois que tu t'y connais.
+
+0
+418:25:12,000 --> 419:25:12,000
+ Non, c'était pas lui.
+
+0
+420:25:12,000 --> 421:25:12,000
+ Cet avorton misérable ne m'arrive pas à la cheville.
+
+0
+422:25:12,000 --> 424:25:12,000
+ Le public n'a pas été mis au courant de cette histoire.
+
+0
+425:25:12,000 --> 427:25:12,000
+ Je ne voulais pas que l'affaire s'ébrouille.
+
+0
+430:25:12,000 --> 432:25:12,000
+ Je n'ai pas le droit de montrer des signes de faiblesse.
+
+0
+433:25:12,000 --> 436:25:12,000
+ Je suis un symbole de paix, celui qui sauve les gens en gardant le sourire.
+
+0
+439:25:12,000 --> 441:25:12,000
+ Ce sourire me permet de surmonter la pression d'être un super héros.
+
+0
+443:25:12,000 --> 444:25:12,000
+ Mais pas seulement.
+
+0
+445:25:12,000 --> 447:25:12,000
+ Ça m'empêche aussi de me laisser envahir par la peur.
+
+0
+450:25:12,000 --> 452:25:12,000
+ Un pro doit mettre sa vie en jeu à chaque instant.
+
+0
+453:25:12,000 --> 455:25:12,000
+ Je ne vais pas te mentir, c'est pas dans mes habitudes.
+
+0
+456:25:12,000 --> 458:25:12,000
+ Saches que sans Alther, tu ne pourras pas y arriver.
+
+0
+463:25:12,000 --> 464:25:12,000
+ Je vois.
+
+0
+465:25:12,000 --> 468:25:12,000
+ Si tu veux vraiment aider les gens, tu peux devenir policier.
+
+0
+469:25:12,000 --> 470:25:12,000
+ C'est un métier tout à fait respectable.
+
+0
+471:25:12,000 --> 473:25:12,000
+ On leur reproche de se contenter de réceptionner nos prises.
+
+0
+474:25:12,000 --> 475:25:12,000
+ Mais ils sont plus utiles que ce qu'on croit.
+
+0
+479:25:12,000 --> 481:25:12,000
+ C'est bien d'avoir des rêves dans la vie.
+
+0
+483:25:12,000 --> 487:25:12,000
+ Seulement, jeune homme, il faut aussi savoir accepter la réalité.
+
+0
+494:25:12,000 --> 496:25:12,000
+ En route, il faut que j'aille livrer ce vilain.
+
+0
+513:25:11,999 --> 514:25:11,999
+ Il manquait plus que ça.
+
+0
+521:25:11,999 --> 523:25:11,999
+ Un vilain ! Je dois voir quel héros vous sont occupés !
+
+0
+524:25:11,999 --> 525:25:11,999
+ Non.
+
+0
+526:25:11,999 --> 528:25:11,999
+ Je vais pas te mentir, c'est pas dans mes habitudes.
+
+0
+529:25:11,999 --> 532:25:11,999
+ Saches que sans Alther, tu ne pourras pas y arriver.
+
+0
+542:25:11,999 --> 543:25:11,999
+ Ah !
+
+0
+555:25:11,999 --> 556:25:11,999
+ Ah !
+
+0
+557:25:11,999 --> 558:25:11,999
+ Ah !
+
+0
+564:25:11,999 --> 566:25:11,999
+ Il a pris un gamin en otage !
+
+0
+567:25:11,999 --> 569:25:11,999
+ Laisse le partir tout de suite, espèce de lâche !
+
+0
+573:25:11,999 --> 574:25:11,999
+ Mais c'est quoi ce truc ?
+
+0
+575:25:11,999 --> 576:25:11,999
+ Je ne suis pas de prise !
+
+0
+579:25:11,999 --> 580:25:11,999
+ Beren des, ça va ?
+
+0
+581:25:11,999 --> 582:25:11,999
+ Attention !
+
+0
+584:25:11,999 --> 586:25:11,999
+ Ne vous approchez pas de moi.
+
+0
+591:25:11,999 --> 593:25:11,999
+ Je vais pas me laisser faire.
+
+0
+594:25:11,999 --> 597:25:12,000
+ C'est quoi ta demande de réussir à pas m'amaler ?
+
+0
+599:25:12,000 --> 600:25:12,000
+ Saloperie !
+
+0
+602:25:12,000 --> 603:25:12,000
+ Saloperie !
+
+0
+609:25:12,000 --> 612:25:12,000
+ Ce gosse insuperalterre, j'ai décroché le gros loup.
+
+0
+613:25:12,000 --> 617:25:12,000
+ Pour ne pas rendre une telle puissance, je vais pouvoir me fanger de l'autre !
+
+0
+620:25:12,000 --> 623:25:12,000
+ Bon sang, tu sais qui est ce super vilain ? Il a un sacré niveau.
+
+0
+624:25:12,000 --> 626:25:12,000
+ Il est là-ri, hein ? C'est mort, Clési, l'anombelle héros, il !
+
+0
+626:25:12,000 --> 627:25:12,000
+ Oh, il !
+
+0
+628:25:12,000 --> 633:25:12,000
+ Non, c'est pas vrai ! Je peux pas marcher dans cette rue étroite, il me faut au moins deux voix !
+
+0
+637:25:12,000 --> 642:25:12,000
+ Il est flamme ! N'hésitez pas trop, mon truc ! Je prête à éviter ! Je vous laisse la place pour une fois !
+
+0
+643:25:12,000 --> 648:25:12,000
+ Merci Lucadeau, j'ai du mal à contenir l'incendie ! Où sont les pompiers ? Vous en êtes où, les gars ?
+
+0
+649:25:12,000 --> 653:25:12,000
+ Il est liquide, on peut pas l'attraper. Et le gamin qui l'a pris en otage déchêne son pouvoir.
+
+0
+654:25:12,000 --> 657:25:12,000
+ Cet endroit est un champ de mine ! On ne peut même pas s'approcher !
+
+0
+663:25:12,000 --> 664:25:12,000
+ Attention !
+
+0
+665:25:12,000 --> 668:25:12,000
+ C'est mort, on laisse tomber ! Personne ici est capable de gérer la situation !
+
+0
+669:25:12,000 --> 671:25:12,000
+ Il faut attendre quelqu'un avec un altère adapté !
+
+0
+673:25:12,000 --> 675:25:12,000
+ En ce temps, on doit limiter les dégâts !
+
+0
+675:25:12,000 --> 677:25:12,000
+ Ne t'en fais pas, ça ne devrait pas être long !
+
+0
+678:25:12,000 --> 681:25:12,000
+ C'est pour le gamin que ça m'embête. Il faut qu'il s'accroche pour tenir le coup !
+
+0
+681:25:12,000 --> 686:25:12,000
+ Merde ! Est-ce qu'on va trouver quelqu'un d'assez puissant pour nous débarrasser de ce monstre ?
+
+0
+688:25:12,000 --> 690:25:12,000
+ Ils ont l'air mal barrés !
+
+0
+690:25:12,000 --> 692:25:12,000
+ Oh, je suis super héros !
+
+0
+699:25:12,000 --> 704:25:12,000
+ J'ai dû le laisser tomber. J'étais obsédé par le temps qu'il me restait, au lieu de me concentrer sur l'essentiel.
+
+0
+705:25:12,000 --> 709:25:12,000
+ D'ailleurs, qui je suis pour me permettre de passer un savon à un méfale ?
+
+0
+712:25:12,000 --> 714:25:12,000
+ Je suis vraiment lamentable.
+
+0
+731:25:12,000 --> 735:25:12,000
+ Il est en troisième et il croit encore que ses rêves de gamin vont se réaliser.
+
+0
+736:25:12,000 --> 739:25:12,000
+ Il est temps de penser sérieusement à votre avenir.
+
+0
+740:25:12,000 --> 742:25:12,000
+ Il faut aussi savoir accepter la réalité.
+
+0
+745:25:12,000 --> 748:25:12,000
+ Tout le monde le dit, même le meilleur des héros.
+
+0
+750:25:12,000 --> 753:25:12,000
+ Pourquoi ça me fait pleurer ? Au fond de moi, je l'ai toujours su.
+
+0
+754:25:12,000 --> 757:25:12,000
+ C'est même pour ça que je me suis autant obstiné.
+
+0
+758:25:12,000 --> 760:25:12,000
+ J'ai fait tout ce que j'ai pu pour me voler la face !
+
+0
+765:25:12,000 --> 768:25:12,000
+ C'est là ? Explosion de tout à l'heure venait de là ?
+
+0
+769:25:12,000 --> 772:25:12,000
+ C'est dingue. Mes jambes m'ont amené ici toute seule.
+
+0
+775:25:12,000 --> 778:25:12,000
+ Je ne devrais pas trop m'approcher, je vais me faire du mal.
+
+0
+781:25:12,000 --> 783:25:12,000
+ Qu'est-ce qu'il fait là, lui ?
+
+0
+784:25:12,000 --> 786:25:12,000
+ Oh, le maître l'avait attrapé, comment il a pu s'échapper ?
+
+0
+790:25:12,000 --> 793:25:12,000
+ Il a dû le faire tomber. Ça veut dire que...
+
+0
+795:25:12,000 --> 797:25:12,000
+ C'est de ma faute. C'est sûr.
+
+0
+798:25:12,000 --> 800:25:12,000
+ Pourquoi les héros ne réagissent pas ?
+
+0
+800:25:12,000 --> 802:25:12,000
+ Un collégien a été pris en otage.
+
+0
+802:25:12,000 --> 805:25:12,000
+ Les héros n'osent pas intervenir, ils ont peur de le mettre en danger.
+
+0
+806:25:12,000 --> 809:25:12,000
+ Ce monstre a pris un otage et personne ne fait rien !
+
+0
+810:25:12,000 --> 812:25:12,000
+ Pourquoi il devra en durer suplice ?
+
+0
+812:25:12,000 --> 816:25:12,000
+ Quand je pense que j'ai cru que je mourais, alors que pour moi, ça n'a duré que quelques minutes.
+
+0
+817:25:12,000 --> 818:25:12,000
+ Comment fait-il ?
+
+0
+819:25:12,000 --> 822:25:12,000
+ Je reconnais ce super vilain. C'est celui qu'Holmite poursuivait tout à l'heure.
+
+0
+823:25:12,000 --> 826:25:12,000
+ Holmite est en ville ? C'est vrai ? Vous l'avez vu ?
+
+0
+826:25:12,000 --> 828:25:12,000
+ Oui, moi, je l'ai aperçu il n'y a pas longtemps.
+
+0
+828:25:12,000 --> 832:25:12,000
+ Vous êtes sérieuses ? Dans ce cas, pourquoi il vient pas régler la situation ?
+
+0
+839:25:12,000 --> 842:25:12,000
+ C'est ma faute. À cause de moi, il ne peut pas intervenir.
+
+0
+844:25:12,000 --> 846:25:12,000
+ Je suis lamentable.
+
+0
+847:25:12,000 --> 849:25:12,000
+ Ils ne peuvent pas attraper ce vilain.
+
+0
+850:25:12,000 --> 852:25:12,000
+ Ils attendent le héros avec l'altère adapté ?
+
+0
+854:25:12,000 --> 855:25:12,000
+ Lamentable.
+
+0
+856:25:12,000 --> 860:25:12,000
+ Tiens bon. Je suis désolé pour toi, vraiment.
+
+0
+861:25:12,000 --> 862:25:12,000
+ Lamentable.
+
+0
+863:25:12,000 --> 865:25:12,000
+ Accroche-toi, ils et secours vont arriver.
+
+0
+866:25:12,000 --> 867:25:12,000
+ Je suis lamentable.
+
+0
+868:25:12,000 --> 871:25:12,000
+ Un héros va venir. Il va te sortir de l'agence, je suis sûr.
+
+0
+880:25:12,000 --> 881:25:12,000
+ Ah !
+
+0
+895:25:12,000 --> 897:25:12,000
+ Prenez bien, idiot ! Il va passer trop dangereux !
+
+0
+898:25:12,000 --> 900:25:12,000
+ C'est le mort que je veux tout à l'heure.
+
+0
+900:25:12,000 --> 903:25:12,000
+ Des coups ? Qu'est-ce qui m'arrive ?
+
+0
+903:25:12,000 --> 906:25:12,000
+ Pourquoi je fais ça ? Pourquoi ?
+
+0
+907:25:12,000 --> 908:25:12,000
+ Mort par explosion !
+
+0
+909:25:12,000 --> 913:25:12,000
+ Qu'est-ce qui se passe ? Qu'est-ce que je fais ? Qu'est-ce qu'il faut faire dans ces galards ?
+
+0
+914:25:12,000 --> 915:25:12,000
+ C'est pas un cheveu de sac !
+
+0
+918:25:12,000 --> 919:25:12,000
+ Prends ça !
+
+0
+926:25:12,000 --> 927:25:12,000
+ Kat-Jan !
+
+0
+929:25:12,000 --> 931:25:12,000
+ Des coups ! Qu'est-ce que tu fous là ?
+
+0
+931:25:12,000 --> 933:25:12,000
+ Mais j'en m'en portais toute seule ! J'y peux rien !
+
+0
+937:25:12,000 --> 939:25:12,000
+ On doit y avoir plusieurs raisons qui m'ont poussé.
+
+0
+939:25:12,000 --> 941:25:12,000
+ Il s'agit d'un cas de s'espérer, c'est une faute.
+
+0
+941:25:12,000 --> 943:25:12,000
+ Il faudrait mieux d'éviter de partager mes ambitions.
+
+0
+944:25:12,000 --> 945:25:12,000
+ C'est mon rêve, Kat-Jan !
+
+0
+945:25:12,000 --> 947:25:12,000
+ Je veux aussi savoir à ce que tu as l'intention.
+
+0
+947:25:12,000 --> 949:25:12,000
+ Il garde toujours sourire quand il sauve les gens.
+
+0
+950:25:12,000 --> 952:25:12,000
+ Ce qui est sûr, c'est qu'à cet instant précis,
+
+0
+953:25:12,000 --> 954:25:12,000
+ j'ai vu tes yeux.
+
+0
+955:25:12,000 --> 957:25:12,000
+ C'est comme s'il me demandait de venir te sauver.
+
+0
+961:25:12,000 --> 963:25:12,000
+ Arrête tout de suite !
+
+0
+964:25:12,000 --> 965:25:12,000
+ C'est pas possible !
+
+0
+967:25:12,000 --> 969:25:12,000
+ Je ne peux pas être aussi lamentable !
+
+0
+970:25:12,000 --> 972:25:12,000
+ J'en ai presque terminé avec lui !
+
+0
+973:25:12,000 --> 974:25:12,000
+ Alors friche-moi en paix !
+
+0
+975:25:12,000 --> 977:25:12,000
+ C'est de la folie, le gamin va se faire tuer !
+
+0
+988:25:12,000 --> 989:25:12,000
+ Je ne suis vraiment pas fier de moi !
+
+0
+993:25:12,000 --> 994:25:12,000
+ All Might !
+
+0
+995:25:12,000 --> 997:25:12,000
+ Après tout ce que je t'ai raconté tout à l'heure,
+
+0
+997:25:12,000 --> 1000:25:12,000
+ je ne pouvais pas rester les bras croisés !
+
+0
+1004:25:12,000 --> 1008:25:12,000
+ Le Travelle, un pro n'hésite jamais à mettre sa vie en jeu !
+
+0
+1009:25:12,000 --> 1011:25:12,000
+ All Might !
+
+0
+1012:25:12,000 --> 1013:25:12,000
+ Each Out !
+
+0
+1014:25:12,000 --> 1015:25:12,000
+ Smash !
+
+0
+1023:25:12,000 --> 1024:25:12,000
+ Smash !
+
+0
+1050:25:12,000 --> 1051:25:12,000
+ Il pleut !
+
+0
+1051:25:12,000 --> 1054:25:12,000
+ Il a eu une baisse soudaine de la pression atmosphérique ?
+
+0
+1054:25:12,000 --> 1057:25:12,000
+ Il a dû créer un courant ascendant avec son point !
+
+0
+1060:25:12,000 --> 1063:25:12,000
+ Il a réussi à fabriquer des nuages !
+
+0
+1069:25:12,000 --> 1071:25:12,000
+ C'est complètement dingue !
+
+0
+1073:25:12,000 --> 1076:25:12,000
+ Il a modifié la météo en rien qu'avec un coup du droit !
+
+0
+1077:25:12,000 --> 1080:25:12,000
+ Quel talent ! All Might est le plus fort !
+
+0
+1081:25:12,000 --> 1083:25:12,000
+ Il a fait le plus grand pour le monde !
+
+0
+1094:25:12,000 --> 1097:25:12,000
+ Les autres héros ont rangé tous les morceaux du vilain dans des sacs.
+
+0
+1098:25:12,000 --> 1100:25:12,000
+ Puis ils les ont remis aux forces de l'ordre.
+
+0
+1104:25:12,000 --> 1106:25:12,000
+ J'ai deux mots à te dire !
+
+0
+1106:25:12,000 --> 1108:25:12,000
+ Tu aurais pu te faire tuer !
+
+0
+1108:25:12,000 --> 1110:25:12,000
+ La situation était déjà assez compliquée !
+
+0
+1110:25:12,000 --> 1112:25:12,000
+ Tu aurais pas du temps mêler !
+
+0
+1113:25:12,000 --> 1115:25:12,000
+ Je me suis fait remonter les bretelles.
+
+0
+1115:25:12,000 --> 1117:25:12,000
+ Gacha, nuit, recevait des compliments.
+
+0
+1118:25:12,000 --> 1120:25:12,000
+ Bravo mon garçon, quel courage !
+
+0
+1120:25:12,000 --> 1122:25:12,000
+ Et ton altère est formidable !
+
+0
+1122:25:12,000 --> 1124:25:12,000
+ N'hésite pas à m'appeler quand tu seras devenu pro !
+
+0
+1124:25:12,000 --> 1127:25:12,000
+ J'aurais bien besoin d'un partenaire de ta trempe !
+
+0
+1139:25:12,000 --> 1141:25:12,000
+ Je suis désolé pour l'invité.
+
+0
+1141:25:12,000 --> 1143:25:12,000
+ Mais il était apparaît par les journalistes.
+
+0
+1144:25:12,000 --> 1147:25:12,000
+ Tant pis, je lui enverrai un mail quand j'arriverai à la maison.
+
+0
+1147:25:12,000 --> 1148:25:12,000
+ Décours !
+
+0
+1150:25:12,000 --> 1151:25:12,000
+ Gatchan ?
+
+0
+1156:25:12,000 --> 1157:25:12,000
+ Juste une chose !
+
+0
+1157:25:12,000 --> 1160:25:12,000
+ Je t'ai jamais appelé au secours et c'est pas prêt d'arriver !
+
+0
+1161:25:12,000 --> 1163:25:12,000
+ Je t'ai jamais appelé au secours !
+
+0
+1163:25:12,000 --> 1165:25:12,000
+ Je t'ai jamais appelé au secours !
+
+0
+1165:25:12,000 --> 1167:25:12,000
+ Je t'ai jamais appelé au secours !
+
+0
+1167:25:12,000 --> 1169:25:12,000
+ Je t'ai jamais appelé au secours et c'est pas prêt d'arriver !
+
+0
+1169:25:12,000 --> 1171:25:12,000
+ De toute façon, t'as rien fait !
+
+0
+1171:25:12,000 --> 1174:25:12,000
+ Minable ! T'es chez de me prendre de haut !
+
+0
+1174:25:12,000 --> 1177:25:12,000
+ T'es qu'un misérable bourre à rien qui ne m'aime pas d'altère !
+
+0
+1177:25:12,000 --> 1179:25:12,000
+ Tu t'attendais à quoi ?
+
+0
+1179:25:12,000 --> 1181:25:12,000
+ Je n'avais pas besoin de toi !
+
+0
+1181:25:12,000 --> 1182:25:12,000
+ Tu m'entends ?
+
+0
+1182:25:12,000 --> 1184:25:12,000
+ Espèce de sale nerd !
+
+0
+1185:25:12,000 --> 1187:25:12,000
+ Quel mauvais caractère !
+
+0
+1190:25:12,000 --> 1192:25:12,000
+ Quoi qu'il en soit, il a raison.
+
+0
+1192:25:12,000 --> 1195:25:12,000
+ On a intervention, on a rien changé à la situation.
+
+0
+1195:25:12,000 --> 1197:25:12,000
+ Enfance n'est peut-être pas plus mal.
+
+0
+1197:25:12,000 --> 1200:25:12,000
+ Il faut que je me décide à trouver une nouvelle voie.
+
+0
+1200:25:12,000 --> 1202:25:12,000
+ La cavalerie est là !
+
+0
+1204:25:12,000 --> 1206:25:12,000
+ Mais c'est All Might ! Qu'est-ce que vous faites là ?
+
+0
+1206:25:12,000 --> 1209:25:12,000
+ Où sont passés les journalistes qui étaient avec vous ?
+
+0
+1210:25:12,000 --> 1212:25:12,000
+ Je les ai semer, on n'a rien de temps !
+
+0
+1213:25:12,000 --> 1214:25:12,000
+ Et tu sais pourquoi ?
+
+0
+1214:25:12,000 --> 1217:25:12,000
+ Parce que je suis le puissant All Might !
+
+0
+1217:25:12,000 --> 1219:25:12,000
+ Ah !
+
+0
+1223:25:12,000 --> 1225:25:12,000
+ Ah mon garçon !
+
+0
+1225:25:12,000 --> 1227:25:12,000
+ Je te prie de m'excuser.
+
+0
+1227:25:12,000 --> 1229:25:12,000
+ Je voudrais aussi te faire une proposition.
+
+0
+1229:25:12,000 --> 1230:25:12,000
+ Ah !
+
+0
+1230:25:12,000 --> 1232:25:12,000
+ C'est grâce à toi que j'ai sauvé le gamin.
+
+0
+1232:25:12,000 --> 1235:25:12,000
+ C'est parce que tu m'as raconté ton histoire.
+
+0
+1235:25:12,000 --> 1238:25:12,000
+ Sans toi, je n'aurais été qu'un beau parlerre.
+
+0
+1238:25:12,000 --> 1239:25:12,000
+ Je te remercie.
+
+0
+1239:25:12,000 --> 1242:25:12,000
+ C'est pas vrai ! Le vilain s'est échappé à cause de moi !
+
+0
+1243:25:12,000 --> 1245:25:12,000
+ Je vous ai dérangé pendant le travail.
+
+0
+1245:25:12,000 --> 1247:25:12,000
+ Je vous racontais mes rêves.
+
+0
+1247:25:12,000 --> 1249:25:12,000
+ Je n'ai même pas d'Alterre.
+
+0
+1249:25:12,000 --> 1250:25:12,000
+ Justement.
+
+0
+1250:25:12,000 --> 1252:25:12,000
+ Tu es le seul qui a osé intervenir.
+
+0
+1252:25:12,000 --> 1255:25:12,000
+ Pourtant, tu n'as aucun pouvoir pour te protéger des super-villes.
+
+0
+1255:25:12,000 --> 1257:25:12,000
+ Ton courage m'a ouvert les yeux.
+
+0
+1260:25:12,000 --> 1264:25:12,000
+ Tous les plus grands héros se sont fait remarquer avant de quitter le collège.
+
+0
+1265:25:12,000 --> 1267:25:12,000
+ Ils disent tous la même chose.
+
+0
+1270:25:12,000 --> 1274:25:12,000
+ Ils disent que leur corps a réagis avant qu'ils aient eu le temps de réfléchir.
+
+0
+1276:25:12,000 --> 1277:25:12,000
+ Ah !
+
+0
+1284:25:12,000 --> 1285:25:12,000
+ Je ne sais pas pourquoi.
+
+0
+1285:25:12,000 --> 1288:25:12,000
+ Les paroles de ma mère me sont revenus à ce moment-là.
+
+0
+1289:25:12,000 --> 1291:25:12,000
+ Je suis désolée, mon cœur !
+
+0
+1292:25:12,000 --> 1294:25:12,000
+ Je suis désolée, tellement désolée !
+
+0
+1297:25:12,000 --> 1300:25:12,000
+ C'est ce qui t'a arrivé. C'est comme ça que ça s'est passé.
+
+0
+1305:25:12,000 --> 1307:25:12,000
+ Ce n'était pas ce que je voulais entendre, maman.
+
+0
+1309:25:12,000 --> 1312:25:12,000
+ Ce n'était pas ce que je voulais que tu me disses ce jour-là.
+
+0
+1315:25:12,000 --> 1317:25:12,000
+ J'aurais voulu entendre autre chose.
+
+0
+1322:25:12,000 --> 1323:25:12,000
+ Tu peux y arriver.
+
+0
+1323:25:12,000 --> 1325:25:12,000
+ Tu peux devenir un super-héros.
+
+0
+1326:25:12,000 --> 1328:25:12,000
+ Parfois, les rêves se réalisent.
+
+0
+1331:25:12,000 --> 1335:25:12,000
+ J'ai oublié de vous dire que cette histoire, c'est celle de ma destinée.
+
+0
+1335:25:12,000 --> 1338:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1415:25:12,000 --> 1417:25:12,000
+ Mon garçon, est-ce que tu te sens prêt à hériter de mon pouvoir ?
+
+0
+1417:25:12,000 --> 1418:25:12,000
+ Je ne sais pas pourquoi.
+
+0
+1418:25:12,000 --> 1419:25:12,000
+ Je ne sais pas pourquoi.
+
+0
+1419:25:12,000 --> 1421:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1421:25:12,000 --> 1423:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1423:25:12,000 --> 1425:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1425:25:12,000 --> 1427:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1427:25:12,000 --> 1429:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1429:25:12,000 --> 1431:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1431:25:12,000 --> 1433:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1433:25:12,000 --> 1435:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1435:25:12,000 --> 1437:25:12,000
+ Je vais vous raconter comment je suis devenu un super-héros.
+
+0
+1437:25:12,000 --> 1439:25:12,000
+ Mon garçon, est-ce que tu te sens prêt à hériter de mon pouvoir ?
+
+0
+1439:25:12,000 --> 1441:25:12,000
+ Vous allez me donner votre alter ?
+
+0
+1441:25:12,000 --> 1443:25:12,000
+ Exactement.
+
+0
+1443:25:12,000 --> 1445:25:12,000
+ Je vais t'offrir le One for All.
+
+0
+1445:25:12,000 --> 1447:25:12,000
+ Oh, c'est pas vrai. Je vais devenir un héros.
+
+0
+1447:25:12,000 --> 1449:25:12,000
+ Ha ha, non, c'est impossible.
+
+0
+1449:25:12,000 --> 1451:25:12,000
+ Ton corps ne le supporterait pas.
+
+0
+1451:25:12,000 --> 1453:25:12,000
+ Ah ! Prochain épisode, le Condement des Muscles.
+
+0
+1453:25:12,000 --> 1455:25:12,000
+ Le petit Izouk ou Midoriya va se transformer en armoire à glace.
+
+0
+1455:25:12,000 --> 1457:25:12,000
+ Au-delà des limites.
+
+0
+1457:25:12,000 --> 1459:25:12,000
+ Oh, c'est pas vrai.
+
+0
+1459:25:12,000 --> 1461:25:12,000
+ Je vais te donner le One for All.
+
+0
+1461:25:12,000 --> 1463:25:12,000
+ Oh, c'est pas vrai. Je vais devenir un héros.
+
+0
+1463:25:12,000 --> 1465:25:12,000
+ Oh, c'est pas vrai. Je vais devenir un héros.
+
+0
+1465:25:12,000 --> 1467:25:12,000
+ Au-delà des limites.
+
+0
+1467:25:12,000 --> 1469:25:12,000
+ Plus ultra.
+
