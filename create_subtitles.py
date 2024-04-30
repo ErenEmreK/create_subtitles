@@ -50,14 +50,18 @@ def result_to_srt(result, output_file, glue):
     print(f'Subtitle file {output_file} is ready.')   
 
 def subtitles_for_list(model, video_list, sub_path, OUT_ISDIR=False, sub_extension='.srt', glue=False):
-
+    file_count = len(video_list)
     done = 0
     for video_path in video_list:
         result = model.transcribe(video_path)
-        
-        sub_file = os.path.splitext(video_path)[0] + sub_extension
-        sub_path = os.path.join(sub_folder, sub_file)
-        if sub_extension == '.srt':
+        if OUT_ISDIR:
+            #TODO Just get filename w/o absolute path and create sub_file that way
+            sub_file = os.path.splitext(video_path)[0] + sub_extension
+            sub_path = os.path.join(sub_path, sub_file)
+        else:
+            sub_file = sub_path
+            
+        if os.path.splitext(sub_file)[1] == '.srt':
             result_to_srt(result, sub_path, glue=glue)
             done += 1
             print(f"{done}/{file_count}")
