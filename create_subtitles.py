@@ -17,7 +17,7 @@ def convert_time(seconds):
     
     return (hours, minutes, seconds, miliseconds)
 
-def result_to_srt(result, output_file, glue):
+def result_to_srt(result, output_file, glue=False, plus_time=False):
     #We create our srt object
     subs = pysrt.SubRipFile()
 
@@ -37,8 +37,14 @@ def result_to_srt(result, output_file, glue):
         #If glue is used we set end time of instances as start of the next one
         for i in range(len(result['segments']) - 1):
             start_time = convert_time(result['segments'][i]['start'])
-            end_time = convert_time(result['segments'][i+1]['start'])
-            
+            if not plus_time:
+                end_time = convert_time(result['segments'][i+1]['start'])
+            else:
+                #TODO drop second calc altogether, use start time above instead
+                #We add plus time to instance to prolong it
+                #TODO check
+                end_time = convert_time(min(result['segments'][i+1]['start'], 
+                                            (result['segments'][i]['end']) + plus_time))
             sub_item = pysrt.SubRipItem(start=start_time, 
                                         end=end_time, 
                                         text=result['segments'][i]['text'])
@@ -95,6 +101,11 @@ def get_paths(input, output):
     return i, o, OUT_ISDIR
             
 def main():
+    #1-Assuming you can use "." in CLI: 
+    model_names = ['tiny.en', 'base.en', 'small.en', 'medium.en', 'large.en', 
+                   'tiny', 'base', 'small', 'medium', 'large']
+    #2-Assuming syntax
+    model = whisper.load_model(command) if command in model_names for command in sys.argv[2:] else whisper.load_model("small") 
     input_paths, output_path, OUT_ISDIR = get_paths(sys.argv[1], sys.argv[2])
     
     
