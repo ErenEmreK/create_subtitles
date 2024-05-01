@@ -80,6 +80,8 @@ def get_commands(sys_args):
         output_path = None
         plus_time = 0
         sub_format = '.srt'
+        model_size = 'small'
+        input_list = []
         
         extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm']
         sub_extensions = ['.srt']
@@ -87,12 +89,14 @@ def get_commands(sys_args):
         i = sys_args[1]
         
         if os.path.isfile(i):
+            #we set input folder as output folder by default 
             output_path = os.path.dirname(i)
-            input = [i]
+            input_list = [i]
         
         elif os.path.isdir(i):
+            #we set input folder as output folder by default 
             output_path = i
-            input = [os.path.join(i, file) for file in os.listdir(i) if os.path.splitext(file)[1] in extensions]
+            input_list = [os.path.join(i, file) for file in os.listdir(i) if os.path.splitext(file)[1] in extensions]
     
         else:
             print("Input file/directory is invalid.")
@@ -104,11 +108,13 @@ def get_commands(sys_args):
                 if os.path.isdir(requested_path) :
                     output_path = requested_path
                 elif os.path.isfile(requested_path) and os.path.splitext(requested_path)[1] in sub_extensions:
+                    print(os.path.splitext(requested_path)[1])
                     output_path = requested_path
                     sub_format = os.path.splitext(requested_path)[1]
                 else:
                     print("Requested output path is invalid or includes non-supported format. Supported formats: " + str(sub_extensions))
                     sys.exit()
+            #TODO
             except IndexError:
                 pass
     
@@ -117,12 +123,32 @@ def get_commands(sys_args):
                 requested_format = sys_args[sys_args.index("-f") + 1] 
                 if requested_format in sub_extensions:
                     sub_format = requested_format
+                else:
+                    print("Unable to create requested subtitle format. Supported formats: " + str(sub_extensions))
+                    sys.exit()
             except IndexError:
                 pass
             
         if "-p" in sys_args:
+            try:
+                plus_time = int(sys_args[sys_args.index("-p") + 1]) 
+            except (ValueError, IndexError):
+                print("Plus-time didn't specified properly.")
+                sys.exit()
             
+        if "-m" in sys_args:
+            model_size_names = ['tiny.en', 'base.en', 'small.en', 'medium.en', 'large.en', 
+                   'tiny', 'base', 'small', 'medium', 'large']
+            try:
+                requested_model = sys_args[sys_args.index("-m") + 1] 
+                if requested_model in model_size_names:
+                    model_size = requested_model
+            except IndexError:
+                print(f"Model keyword did not used properly. Default ({model_size}) model is being used instead.")
+                pass
             
+        return model_size, input_list, output_path, sub_format, plus_time
+    
     else:
         print("You must enter an input path.")
         sys.exit()
@@ -130,11 +156,9 @@ def get_commands(sys_args):
  
     
 def main():
-    #1-Assuming you can use "." in CLI: 
-    model_names = ['tiny.en', 'base.en', 'small.en', 'medium.en', 'large.en', 
-                   'tiny', 'base', 'small', 'medium', 'large']
-    #2-Assuming syntax
-    model = whisper.load_model(command) if command in model_names for command in sys.argv[2:] else whisper.load_model("small") 
-    input_paths, output_path, OUT_ISDIR = get_paths(sys.argv[1], sys.argv[2])
+    model_size, input_list, output_path, sub_format, plus_time = get_commands(sys.argv)
+
+    print(model_size, input_list, output_path, sub_format, plus_time)
     
-    
+if __name__ == '__main__':
+    main()
