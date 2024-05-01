@@ -58,9 +58,13 @@ def subtitles_for_list(model, video_list, sub_path, plus_time=0, sub_extension='
         if os.path.isdir(sub_path):
             sub_file = os.path.splitext(video_path)[0] + sub_extension
         else:
-            sub_file = sub_path
-            
-        if os.path.splitext(sub_file)[1] == '.srt':
+            if file_count <= 1:
+                sub_file = os.path.splitext(sub_path)[0] + sub_extension
+            else: 
+                print("Can't write multiple medias to one subtitle file. Creating subtitles in media's location instead.")
+                sub_file = os.path.splitext(video_path)[0] + sub_extension
+                
+        if sub_extension == '.srt':
             result_to_srt(result, sub_path, plus_time=plus_time)
             done += 1
             print(f"{done}/{file_count}")
@@ -75,15 +79,19 @@ def get_commands(sys_args):
         
         output_path = None
         plus_time = 0
+        sub_format = '.srt'
         
-        extensions = ['.mp4', '.mkv', '.mp3', '.wav', 'mpeg', 'm4a', 'webm']
+        extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm']
+        sub_extensions = ['.srt']
         
         i = sys_args[1]
         
         if os.path.isfile(i):
+            output_path = os.path.dirname(i)
             input = [i]
         
         elif os.path.isdir(i):
+            output_path = i
             input = [os.path.join(i, file) for file in os.listdir(i) if os.path.splitext(file)[1] in extensions]
     
         else:
@@ -92,20 +100,34 @@ def get_commands(sys_args):
             
         if "-o" in sys_args:    
             try:
-                output_path = sys_args[sys_args.index("-o") + 1]
+                requested_path = sys_args[sys_args.index("-o") + 1] 
+                if os.path.isdir(requested_path) :
+                    output_path = requested_path
+                elif os.path.isfile(requested_path) and os.path.splitext(requested_path)[1] in sub_extensions:
+                    output_path = requested_path
+                    sub_format = os.path.splitext(requested_path)[1]
+                else:
+                    print("Requested output path is invalid or includes non-supported format. Supported formats: " + str(sub_extensions))
+                    sys.exit()
             except IndexError:
                 pass
     
-        if not output_path:
-            output_path = 
+        if "-f" in sys_args:
+            try:
+                requested_format = sys_args[sys_args.index("-f") + 1] 
+                if requested_format in sub_extensions:
+                    sub_format = requested_format
+            except IndexError:
+                pass
+            
+        if "-p" in sys_args:
+            
             
     else:
         print("You must enter an input path.")
         sys.exit()
         
-
-    
-    
+ 
     
 def main():
     #1-Assuming you can use "." in CLI: 
