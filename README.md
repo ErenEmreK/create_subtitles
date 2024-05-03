@@ -37,7 +37,7 @@ pip install pysrt
 ```
 
 ## Usage
-Most basic usage requires only a video/audio file to create captions for.
+Most basic usage requires only a video/audio file to create captions for:
 ```python
 create_subtitles.py path/to/video.mkv 
 ```
