@@ -46,7 +46,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
         #We get result texts from whisper
         result = model.transcribe(video_path)
         #We set subtitle name same as video name
-        sub_file = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
+        sub_base_name = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
+        sub_file = os.path.join(sub_dir, sub_base_name)
         if sub_extension == '.srt':
             result_to_srt(result, sub_file, plus_time=plus_time)
             done += 1
