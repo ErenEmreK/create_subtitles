@@ -1,7 +1,7 @@
 
-# Subtitle Creator
+# Create_Subtitles
 
-A command-line application to easily create captions for video/audio files using OpenAI's Whisper library.
+A command-line application to easily create subtitles for video/audio files in their language using OpenAI's Whisper library.
 
 
 
@@ -9,7 +9,7 @@ A command-line application to easily create captions for video/audio files using
 ## Dependencies
 
 #### ffmpeg
-Whisper uses brilliant command-line tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
+Whisper uses the brilliant command-line tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
 
 ```
 # on Ubuntu
@@ -37,11 +37,11 @@ pip install pysrt
 ```
 
 ## Usage
-Most basic usage requires only a video/audio file to create captions for:
+Most basic usage requires only a video/audio file to create subtitles for:
 ```python
 create_subtitles.py path/to/video.mkv 
 ```
-You can also just use a folder name instead, it will create captions for all available media files in that folder.
+You can also just use a folder name instead, it will create subtitles for all available media files in that folder.
 ```python
 create_subtitles.py path/to/video/directory
 ```
@@ -60,3 +60,5 @@ Since bigger models consume considerably more VRAM, be sure your GPU is up to ta
 ```python
 create_subtitles.py path/to/video/folder -p 1.25 -m small 
 ```
+
+
