@@ -11,7 +11,7 @@ A command-line application to easily create captions for video/audio files using
 #### ffmpeg
 Whisper uses brilliant command-line tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
 
-```http
+```
 # on Ubuntu
 sudo apt update && sudo apt install ffmpeg
 
@@ -24,7 +24,7 @@ brew install ffmpeg
 
 #### Whisper
 You can install our main Speech to Text model [whisper](https://github.com/openai/whisper) via:
-```http
+```
 pip install openai-whisper
 ```
 
@@ -32,7 +32,7 @@ pip install openai-whisper
 
 [Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files. Install with commands below:
 
-```http
+```
 pip install pysrt
 ```
 
