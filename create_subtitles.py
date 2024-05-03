@@ -47,9 +47,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
         result = model.transcribe(video_path)
         #We set subtitle name same as video name
         sub_file = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
-                
         if sub_extension == '.srt':
-            result_to_srt(result, sub_dir, plus_time=plus_time)
+            result_to_srt(result, sub_file, plus_time=plus_time)
             done += 1
             print(f"{done}/{file_count}")
         else:
@@ -152,7 +151,7 @@ def get_commands(sys_args):
 def main():
 
     model_size, input_list, output_dir, sub_format, plus_time = get_commands(sys.argv)
-    print(sys.argv)
+   
     model = whisper.load_model(model_size)
     subtitles_for_list(model, input_list, output_dir, sub_format, plus_time)
     
