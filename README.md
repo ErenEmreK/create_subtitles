@@ -1,5 +1,5 @@
 
-# Subtitle Creator
+# Create Subtitles
 
 A command-line application to easily create captions for video/audio files using OpenAI's Whisper library.
 
