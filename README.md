@@ -1,7 +1,7 @@
 
-# Subtitle_Creator
+# Subtitle Creator
 
-A command-line application to easily create subtitles for video/audio files in their language using OpenAI's Whisper library.
+A command-line application to easily create subtitles for video/audio files using OpenAI's Whisper library.
 
 
 
@@ -37,7 +37,23 @@ pip install pysrt
 ```
 
 ## Usage
-Most basic usage requires only a video/audio file to create subtitles for:
+
+#### Important Update 1.01!!
+After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create efficient subtitles quickly using stable_whisper model, this is the way to go now:
+
+```python
+create_subtitles.py path/to/video.mp4 -s
+                or
+create_subtitles.py path/to/video/folder -s
+```
+And if you want to use timestamps for active words:
+```python
+create_subtitles.py path/to/video.mkv -s -t
+```
+
+#### If you still prefer legacy version: 
+
+Basic usage requires only a video/audio file to create subtitles for.
 ```python
 create_subtitles.py path/to/video.mkv 
 ```
@@ -60,5 +76,3 @@ Since bigger models consume considerably more VRAM, be sure your GPU is up to ta
 ```python
 create_subtitles.py path/to/video/folder -p 1.25 -m small 
 ```
-
-

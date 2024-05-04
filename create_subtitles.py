@@ -58,22 +58,24 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
             print(f"Unable to create {sub_extension} files. ")
             break
 
-def stable_subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', tag=('<font color="#FFFFFF">', '</font>')):         
+def stable_subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', refine=False, tag=('<font color="#FFFFFF">', '</font>')):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
     for video_path in video_list:
-        #We get result texts from whisper
+        
         result = model.transcribe(video_path)
-        #We set subtitle name same as video name
+        if refine:
+            result = model.refine(video_path, result)
+        
         sub_base_name = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
         sub_file = os.path.join(sub_dir, sub_base_name)
+        
         if sub_extension == '.srt' or '.vtt':
             result.to_srt_vtt(sub_file, tag=tag)
             done += 1
             print(f"{done}/{file_count}")
         else:
-            #TODO implement other subtitle formats
             print(f"Unable to create {sub_extension} files. ")
             break
         
@@ -95,6 +97,7 @@ def commands(sys_args):
         input_list = []
         use_stable = False
         timestamps = False
+        refine = False
         
         extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm']
         sub_extensions = ['.srt']
@@ -170,16 +173,19 @@ def commands(sys_args):
             
             elif sys_args[n] == "-t":
                 timestamps = True
+            
+            elif sys_args[n] == "-r":
+                refine = True
               
     else:
         print("You must enter an input path.")
         sys.exit()
         
-    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps 
+    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine
     
 def main():
 
-    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps = commands(sys.argv)
+    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine = commands(sys.argv)
    
     if not use_stable:
         model = whisper.load_model(model_size)
@@ -191,7 +197,7 @@ def main():
         else: 
             tag = ('<u>', '</u>')
                 
-        stable_subtitles_for_list(model, input_list, output_dir, sub_format, tag=tag)
+        stable_subtitles_for_list(model, input_list, output_dir, sub_format, refine=refine, tag=tag)
 
     
     
