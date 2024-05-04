@@ -4,6 +4,7 @@ import os
 import whisper
 import stable_whisper
 import pysrt
+from vtt_compatibility import result_to_vtt, stable_result_to_vtt
 
 def convert_time(seconds):
 
@@ -57,58 +58,53 @@ def stable_result_to_srt(result, output_file, plus_time=0):
     subs.save(output_file, encoding='utf-8')
     print(f'Subtitle file {output_file} is ready.') 
                                 
-def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0):
+def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
     for video_path in video_list:
-        #We get result texts from whisper
         result = model.transcribe(video_path)
-        #We set subtitle name same as video name
-        sub_base_name = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
-        sub_file = os.path.join(sub_dir, sub_base_name)
-        if sub_extension == '.srt':
-            result_to_srt(result, sub_file, plus_time=plus_time)
-            done += 1
-            print(f"{done}/{file_count}")
-        else:
-            #TODO implement other subtitle formats
-            print(f"Unable to create {sub_extension} files. ")
-            break
-
-def stable_subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>')):         
-    file_count = len(video_list)
-    done = 0
-    print(f"Creating subtitles for {file_count} files. This may take a while...")
-    for video_path in video_list:
-        
-        result = model.transcribe(video_path)
-        if refine:
+        if use_stable and refine:
             result = model.refine(video_path, result)
         
         sub_base_name = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
         sub_file = os.path.join(sub_dir, sub_base_name)
         
-        if not plus_time:
-            if sub_extension == '.srt' or '.vtt':
-                result.to_srt_vtt(sub_file, tag=tag)
-                done += 1
-                print(f"{done}/{file_count}")
+        if use_stable:
+            if not plus_time:
+                if sub_extension == '.srt' or '.vtt':
+                    result.to_srt_vtt(sub_file, tag=tag)
+                    done += 1
+                    print(f"{done}/{file_count}")
+                else:
+                    print(f"Unable to create {sub_extension} files. ")
+                    sys.exit()
+            
             else:
-                print(f"Unable to create {sub_extension} files. ")
-                break
-        
+                if sub_extension == '.srt':
+                    stable_result_to_srt(result, sub_file, plus_time=plus_time)
+                    done += 1
+                    print(f"{done}/{file_count}")
+                elif sub_extension == '.vtt':
+                    stable_result_to_vtt(result, sub_file, plus_time=plus_time)
+                    done += 1
+                    print(f"{done}/{file_count}")
+                else:
+                    print(f"Unable to create {sub_extension} files. ")
+                    sys.exit()
+                
         else:
             if sub_extension == '.srt':
-                stable_result_to_srt(result, sub_file, plus_time=plus_time)
+                result_to_srt(result, sub_file, plus_time=plus_time)
                 done += 1
                 print(f"{done}/{file_count}")
+            elif sub_extension == '.vtt':
+                    result_to_vtt(result, sub_file, plus_time=plus_time)
+                    done += 1
+                    print(f"{done}/{file_count}")
             else:
-                #TODO implement other subtitle formats
                 print(f"Unable to create {sub_extension} files. ")
-                break
-                
-        
+                sys.exit()
         
 def commands(sys_args):
     
@@ -131,7 +127,7 @@ def commands(sys_args):
         refine = False
         
         extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm']
-        sub_extensions = ['.srt']
+        sub_extensions = ['.srt', '.vtt']
         
         i = sys_args[1]
         
@@ -217,18 +213,24 @@ def commands(sys_args):
 def main():
 
     model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine = commands(sys.argv)
-   
-    if not use_stable:
-        model = whisper.load_model(model_size)
-        subtitles_for_list(model, input_list, output_dir, sub_format, plus_time)
-    else:
-        model = stable_whisper.load_model(model_size)
-        if sub_format == '.srt':   
-            tag = None if timestamps else ('<font color="#FFFFFF">', '</font>') 
-        else: 
-            tag = ('<u>', '</u>')
-                
-        stable_subtitles_for_list(model, input_list, output_dir, sub_extension=sub_format, plus_time=plus_time, refine=refine, tag=tag)
+
+    model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
+        
+    if sub_format == '.srt':   
+        tag = None if timestamps else ('<font color="#FFFFFF">', '</font>') 
+    else: 
+        tag = ('<u>', '</u>')
+    
+    #Temporary warning until creating vtt for legacy model
+    if sub_format == '.vtt' and not use_stable:
+        print("Creating .vtt files is only possible with stable models at the moment. Use '-s' command to switch to stable models or use .srt instead.")
+        sys.exit()
+        
+    subtitles_for_list(model, input_list, output_dir, 
+                       sub_extension=sub_format, plus_time=plus_time, 
+                       refine=refine, tag=tag, 
+                       use_stable=use_stable)
+    
 
     
     
