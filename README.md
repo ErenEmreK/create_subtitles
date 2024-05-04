@@ -50,7 +50,14 @@ And if you want to use timestamps for active words:
 ```python
 create_subtitles.py path/to/video.mkv -s -t
 ```
-
+You can still use offset -more information below about how offset works- in order subtitles to stay longer via -p command (only caveat being you can not use timestamps when you are using offset):
+```python
+create_subtitles.py path/to/video.mkv -s -p 0.75
+```
+You can use other commands too:
+```python
+create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 0.5 -m base 
+```
 #### If you still prefer legacy version: 
 
 Basic usage requires only a video/audio file to create subtitles for.
@@ -65,7 +72,7 @@ You can declare directory you want subtitles to be created in. (If you don't use
 ```python
 create_subtitles.py path/to/video.mp4 -o path/to/subtitle/directory
 ```
--p arguement will add desired amount of (seconds) offset time to end of every subtitle instance. Since AI generated subtitle will exactly disappear when sentence is finished, it is recommended to use 1 to 1.5 second of offset. (If next subtitle instance comes too quickly it will keep the instance till the next one to ensure they won't crash.)
+-p arguement will add desired amount of (seconds) offset time to end of every subtitle instance. Since AI generated subtitle will exactly disappear when sentence is finished, it is recommended to use 0.5 to 1.5 second of offset. (If next subtitle instance comes too quickly it will keep the instance till the next one to ensure they won't crash.)
 ```python
 create_subtitles.py path/to/video.mp4 -p 1
 ```
@@ -74,5 +81,5 @@ create_subtitles.py path/to/video.mp4 -p 1
 Since bigger models consume considerably more VRAM, be sure your GPU is up to task before using those. You can also see the requirements in the link above.
 
 ```python
-create_subtitles.py path/to/video/folder -p 1.25 -m small 
+create_subtitles.py path/to/video/folder -p 0.75 -m small 
 ```
