@@ -4,7 +4,6 @@ import os
 import whisper
 import stable_whisper
 import pysrt
-from vtt_compatibility import result_to_vtt, stable_result_to_vtt
 
 def convert_time(seconds):
 
@@ -85,10 +84,6 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                     stable_result_to_srt(result, sub_file, plus_time=plus_time)
                     done += 1
                     print(f"{done}/{file_count}")
-                elif sub_extension == '.vtt':
-                    stable_result_to_vtt(result, sub_file, plus_time=plus_time)
-                    done += 1
-                    print(f"{done}/{file_count}")
                 else:
                     print(f"Unable to create {sub_extension} files. ")
                     sys.exit()
@@ -98,10 +93,6 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                 result_to_srt(result, sub_file, plus_time=plus_time)
                 done += 1
                 print(f"{done}/{file_count}")
-            elif sub_extension == '.vtt':
-                    result_to_vtt(result, sub_file, plus_time=plus_time)
-                    done += 1
-                    print(f"{done}/{file_count}")
             else:
                 print(f"Unable to create {sub_extension} files. ")
                 sys.exit()
@@ -221,18 +212,16 @@ def main():
     else: 
         tag = ('<u>', '</u>')
     
-    #Temporary warning until creating vtt for legacy model
-    if sub_format == '.vtt' and not use_stable:
-        print("Creating .vtt files is only possible with stable models at the moment. Use '-s' command to switch to stable models or use .srt instead.")
+    #Temporary warning until vtt support for plus_time 
+    if sub_format == '.vtt' and (not use_stable or plus_time):
+        print("Creating .vtt files is only possible with stable models and without using offset at the moment. Use '-s' command to switch to stable models or use .srt instead.")
         sys.exit()
         
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
                        use_stable=use_stable)
-    
-
-    
+       
     
 if __name__ == '__main__':
     main()
