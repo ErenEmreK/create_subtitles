@@ -2,6 +2,7 @@ import sys
 import os
 
 import whisper
+import stable_whisper
 import pysrt
 
 def convert_time(seconds):
@@ -56,21 +57,44 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
             #TODO implement other subtitle formats
             print(f"Unable to create {sub_extension} files. ")
             break
-          
-def get_commands(sys_args):
+
+def stable_subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', tag=('<font color="#FFFFFF">', '</font>')):         
+    file_count = len(video_list)
+    done = 0
+    print(f"Creating subtitles for {file_count} files. This may take a while...")
+    for video_path in video_list:
+        #We get result texts from whisper
+        result = model.transcribe(video_path)
+        #We set subtitle name same as video name
+        sub_base_name = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
+        sub_file = os.path.join(sub_dir, sub_base_name)
+        if sub_extension == '.srt' or '.vtt':
+            result.to_srt_vtt(sub_file, tag=tag)
+            done += 1
+            print(f"{done}/{file_count}")
+        else:
+            #TODO implement other subtitle formats
+            print(f"Unable to create {sub_extension} files. ")
+            break
+        
+def commands(sys_args):
     
     if len(sys_args) >= 2:
         
         if sys_args[1] == "-h":
             print("Usage: create_subtitles.py [path/to/input/file.mp4 OR path/to/input/folder] -o [path/to/output/folder] -f [subtitle format] -p [plus time] -m [model size]")
+            print("Less verbose usage: create_subtitles.py [path/to/input/file.mp4 OR path/to/input/folder] -s")
+            print("Check https://github.com/ErenEmreK/create_subtitles")
             #TODO be more verbose here
             sys.exit()
-            
+        
         output_dir = None
         plus_time = 0
         sub_format = '.srt'
         model_size = 'small'
         input_list = []
+        use_stable = False
+        timestamps = False
         
         extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm']
         sub_extensions = ['.srt']
@@ -91,7 +115,7 @@ def get_commands(sys_args):
             print(f"Couldn't reach {i}")
             sys.exit()
             
-        for n in range(len(sys_args)):
+        for n in range(2, len(sys_args)):
             if sys_args[n] == "-o":
                 try:
                     requested_path = sys_args[n + 1] 
@@ -106,7 +130,7 @@ def get_commands(sys_args):
                     print("Output location isn't defined. Creating the files in video folder instead. ")
                     pass
                 
-            if sys_args[n] == "-f":
+            elif sys_args[n] == "-f":
                 try:
                     requested_format = sys_args[n + 1] 
                     if requested_format in sub_extensions:
@@ -117,14 +141,14 @@ def get_commands(sys_args):
                 except IndexError:
                     pass
     
-            if sys_args[n] == "-p":
+            elif sys_args[n] == "-p":
                 try:
                     plus_time = float(sys_args[n + 1]) 
                 except (ValueError, IndexError):
                     print("Plus-time didn't specified properly.")
                     sys.exit()
             
-            if sys_args[n] == "-m":
+            elif sys_args[n] == "-m":
                 model_size_names = ['tiny', 'base', 'small', 'medium', 'large', 'tiny.en',  
                                     'base.en', 'small.en', 'medium.en', 'large.en']
                 try:
@@ -140,21 +164,35 @@ def get_commands(sys_args):
                     print("Model keyword did not used properly. ")
                     print("Possible model keywords: " + str(model_size_names))
                     sys.exit()
-        
             
-        return model_size, input_list, output_dir, sub_format, plus_time
-    
+            elif sys_args[n] == "-s":
+                use_stable = True
+            
+            elif sys_args[n] == "-t":
+                timestamps = True
+              
     else:
         print("You must enter an input path.")
         sys.exit()
-
+        
+    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps 
     
 def main():
 
-    model_size, input_list, output_dir, sub_format, plus_time = get_commands(sys.argv)
+    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps = commands(sys.argv)
    
-    model = whisper.load_model(model_size)
-    subtitles_for_list(model, input_list, output_dir, sub_format, plus_time)
+    if not use_stable:
+        model = whisper.load_model(model_size)
+        subtitles_for_list(model, input_list, output_dir, sub_format, plus_time)
+    else:
+        model = stable_whisper.load_model(model_size)
+        if sub_format == '.srt':   
+            tag = None if timestamps else ('<font color="#FFFFFF">', '</font>') 
+        else: 
+            tag = ('<u>', '</u>')
+                
+        stable_subtitles_for_list(model, input_list, output_dir, sub_format, tag=tag)
+
     
     
 if __name__ == '__main__':
