@@ -39,6 +39,24 @@ def result_to_srt(result, output_file, plus_time=0):
     subs.save(output_file, encoding='utf-8')
     print(f'Subtitle file {output_file} is ready.')   
 
+def stable_result_to_srt(result, output_file, plus_time=0):
+    subs = pysrt.SubRipFile()
+    for i in range(len(result) - 1):
+        start_time = convert_time(result[i].start)
+        end_time = convert_time(min(result[i+1].start, result[i].end + plus_time))
+        
+        sub_item = pysrt.SubRipItem(start=start_time, 
+                                    end=end_time, 
+                                    text=result[i].text)
+        subs.append(sub_item)
+        
+    subs.append(pysrt.SubRipItem(start=convert_time(result[-1].start), 
+                                    end=convert_time(result[-1].end), 
+                                    text=result[-1].text))
+    
+    subs.save(output_file, encoding='utf-8')
+    print(f'Subtitle file {output_file} is ready.') 
+                                
 def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0):
     file_count = len(video_list)
     done = 0
@@ -58,7 +76,7 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
             print(f"Unable to create {sub_extension} files. ")
             break
 
-def stable_subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', refine=False, tag=('<font color="#FFFFFF">', '</font>')):         
+def stable_subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>')):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
@@ -71,13 +89,26 @@ def stable_subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', 
         sub_base_name = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
         sub_file = os.path.join(sub_dir, sub_base_name)
         
-        if sub_extension == '.srt' or '.vtt':
-            result.to_srt_vtt(sub_file, tag=tag)
-            done += 1
-            print(f"{done}/{file_count}")
+        if not plus_time:
+            if sub_extension == '.srt' or '.vtt':
+                result.to_srt_vtt(sub_file, tag=tag)
+                done += 1
+                print(f"{done}/{file_count}")
+            else:
+                print(f"Unable to create {sub_extension} files. ")
+                break
+        
         else:
-            print(f"Unable to create {sub_extension} files. ")
-            break
+            if sub_extension == '.srt':
+                stable_result_to_srt(result, sub_file, plus_time=plus_time)
+                done += 1
+                print(f"{done}/{file_count}")
+            else:
+                #TODO implement other subtitle formats
+                print(f"Unable to create {sub_extension} files. ")
+                break
+                
+        
         
 def commands(sys_args):
     
@@ -197,7 +228,7 @@ def main():
         else: 
             tag = ('<u>', '</u>')
                 
-        stable_subtitles_for_list(model, input_list, output_dir, sub_format, refine=refine, tag=tag)
+        stable_subtitles_for_list(model, input_list, output_dir, sub_extension=sub_format, plus_time=plus_time, refine=refine, tag=tag)
 
     
     
