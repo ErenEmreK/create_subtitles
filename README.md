@@ -41,6 +41,11 @@ pip install pysrt
 #### Important Update 1.01!!
 After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create efficient subtitles quickly using stable_whisper model, this is the way to go now:
 
+Install stable-ts via:
+```python
+pip install -U stable-ts
+```
+Then use Subtitle Creator with -s command.
 ```python
 create_subtitles.py path/to/video.mp4 -s
                 or
