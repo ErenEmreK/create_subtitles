@@ -76,7 +76,6 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
     for i in range(len(result) - 1):
         start_time = convert_time(result[i].start)
         end_time = convert_time(min(result[i+1].start, result[i].end + plus_time))
-<<<<<<< HEAD
         text = result[i].text
         if srt:
             sub_item = pysrt.SubRipItem(start=start_time, 
@@ -110,22 +109,11 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
         subs.save(output_file)
         
     print(f'Subtitle file {output_file} is ready.') 
-                       
-=======
-        
-        sub_item = pysrt.SubRipItem(start=start_time, 
-                                    end=end_time, 
-                                    text=result[i].text)
-        subs.append(sub_item)
-        
-    subs.append(pysrt.SubRipItem(start=convert_time(result[-1].start), 
-                                    end=convert_time(result[-1].end), 
-                                    text=result[-1].text))
-    
-    subs.save(output_file, encoding='utf-8')
-    print(f'Subtitle file {output_file} is ready.') 
-                                
->>>>>>> origin/main
+
+
+
+
+                          
 def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False):         
     file_count = len(video_list)
     done = 0
@@ -140,11 +128,7 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
         
         if use_stable:
             if not plus_time:
-<<<<<<< HEAD
                 if sub_extension == '.srt' or sub_extension == '.vtt':
-=======
-                if sub_extension == '.srt' or '.vtt':
->>>>>>> origin/main
                     result.to_srt_vtt(sub_file, tag=tag)
                     done += 1
                     print(f"{done}/{file_count}")
@@ -153,13 +137,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                     sys.exit()
             
             else:
-<<<<<<< HEAD
                 if sub_extension == '.srt' or sub_extension == '.vtt':
                     stable_result_to_srt_vtt(result, sub_file, plus_time=plus_time)
-=======
-                if sub_extension == '.srt':
-                    stable_result_to_srt(result, sub_file, plus_time=plus_time)
->>>>>>> origin/main
                     done += 1
                     print(f"{done}/{file_count}")
                 else:
@@ -167,13 +146,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                     sys.exit()
                 
         else:
-<<<<<<< HEAD
             if sub_extension == '.srt' or sub_extension == '.vtt':
                 result_to_srt_vtt(result, sub_file, plus_time=plus_time)
-=======
-            if sub_extension == '.srt':
-                result_to_srt(result, sub_file, plus_time=plus_time)
->>>>>>> origin/main
                 done += 1
                 print(f"{done}/{file_count}")
             else:
@@ -290,21 +264,8 @@ def main():
 
     model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
         
-<<<<<<< HEAD
     tag = ('<font color="#FFFFFF">', '</font>') if sub_format == '.srt' and not timestamps else None
 
-=======
-    if sub_format == '.srt':   
-        tag = None if timestamps else ('<font color="#FFFFFF">', '</font>') 
-    else: 
-        tag = ('<u>', '</u>')
-    
-    #Temporary warning until vtt support for plus_time 
-    if sub_format == '.vtt' and (not use_stable or plus_time):
-        print("Creating .vtt files is only possible with stable models and without using offset at the moment. Use '-s' command to switch to stable models or use .srt instead.")
-        sys.exit()
-        
->>>>>>> origin/main
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
