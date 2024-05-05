@@ -56,11 +56,11 @@ create_subtitles.py path/to/video.mkv -s -t
 ```
 You can still use offset -more information below about how offset works- in order subtitles to stay longer via -p command (only caveat being you can not use timestamps when you are using offset):
 ```python
-create_subtitles.py path/to/video.mkv -s -p 0.75
+create_subtitles.py path/to/video.mkv -s -p 1
 ```
 You can still use other commands too, for example:
 ```python
-create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 0.5 -m base -f .vtt
+create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 0.75 -m base -f .vtt
 ```
 #### If you still prefer legacy version (or want to have more information on other commands): 
 

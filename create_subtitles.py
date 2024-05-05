@@ -109,11 +109,7 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
         subs.save(output_file)
         
     print(f'Subtitle file {output_file} is ready.') 
-
-
-
-
-                          
+                         
 def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False):         
     file_count = len(video_list)
     done = 0
@@ -270,7 +266,6 @@ def main():
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
                        use_stable=use_stable)
-       
-    
+         
 if __name__ == '__main__':
     main()
