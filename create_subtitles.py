@@ -3,7 +3,9 @@ import os
 
 import whisper
 import stable_whisper
+
 import pysrt
+from webvtt import WebVTT, Caption
 
 def convert_time(seconds):
 
@@ -18,45 +20,100 @@ def convert_time(seconds):
     
     return (hours, minutes, seconds, miliseconds)
 
-def result_to_srt(result, output_file, plus_time=0):
-    #We create our srt object
-    subs = pysrt.SubRipFile()
-    #We add plus_time to the normal end time of an instance (if it exceeds to next subtitle we just use next ones limit as limit)
+def result_to_srt_vtt(result, output_file, plus_time=0):
+    srt = True if os.path.splitext(output_file)[1] == '.srt' else False
+    if srt:
+        subs = pysrt.SubRipFile()
+    else:
+        subs = WebVTT()
+   
     for i in range(len(result['segments']) - 1):
         start_time = convert_time(result['segments'][i]['start'])
         end_time = convert_time(min(result['segments'][i+1]['start'], 
                                     (result['segments'][i]['end']) + plus_time))
+        text = result['segments'][i]['text']
         
-        sub_item = pysrt.SubRipItem(start=start_time, 
+        if srt:
+            sub_item = pysrt.SubRipItem(start=start_time, 
                                     end=end_time, 
-                                    text=result['segments'][i]['text'])
-        subs.append(sub_item)
-    #And we add last subtitle instance
-    subs.append(pysrt.SubRipItem(start=convert_time(result['segments'][-1]['start']), 
-                                    end=convert_time(result['segments'][-1]['end']), 
-                                    text=result['segments'][-1]['text']))
+                                    text=text)
+            subs.append(sub_item)
+        else:
+            sub_item = Caption(
+            f'{start_time[0]:02d}:{start_time[1]:02d}:{start_time[2]:02d}.{start_time[3]:03d}',
+            f'{end_time[0]:02d}:{end_time[1]:02d}:{end_time[2]:02d}.{end_time[3]:03d}', text)
+            
+            subs.captions.append(sub_item)
     
-    subs.save(output_file, encoding='utf-8')
+    start_time = convert_time(result['segments'][-1]['start'])
+    end_time = convert_time(result['segments'][-1]['end'])
+    text = result['segments'][-1]['text']
+    
+    if srt:
+        subs.append(pysrt.SubRipItem(start=start_time, 
+                                        end=end_time, 
+                                        text=text))
+        
+        subs.save(output_file, encoding='utf-8')
+    else:
+        subs.captions.append(Caption(
+        f'{start_time[0]:02d}:{start_time[1]:02d}:{start_time[2]:02d}.{start_time[3]:03d}',
+        f'{end_time[0]:02d}:{end_time[1]:02d}:{end_time[2]:02d}.{end_time[3]:03d}',
+        text))
+        
+        subs.save(output_file)
+        
     print(f'Subtitle file {output_file} is ready.')   
 
-def stable_result_to_srt(result, output_file, plus_time=0):
-    subs = pysrt.SubRipFile()
+def stable_result_to_srt_vtt(result, output_file, plus_time=0):
+    
+    srt = True if os.path.splitext(output_file)[1] == '.srt' else False
+    if srt:
+        subs = pysrt.SubRipFile()
+    else:
+        subs = WebVTT()
+   
     for i in range(len(result) - 1):
         start_time = convert_time(result[i].start)
         end_time = convert_time(min(result[i+1].start, result[i].end + plus_time))
-        
-        sub_item = pysrt.SubRipItem(start=start_time, 
-                                    end=end_time, 
-                                    text=result[i].text)
-        subs.append(sub_item)
-        
-    subs.append(pysrt.SubRipItem(start=convert_time(result[-1].start), 
-                                    end=convert_time(result[-1].end), 
-                                    text=result[-1].text))
+        text = result[i].text
+        if srt:
+            sub_item = pysrt.SubRipItem(start=start_time, 
+                                        end=end_time, 
+                                        text=text)
+            subs.append(sub_item)
+        else:
+            sub_item = Caption(
+            f'{start_time[0]:02d}:{start_time[1]:02d}:{start_time[2]:02d}.{start_time[3]:03d}',
+            f'{end_time[0]:02d}:{end_time[1]:02d}:{end_time[2]:02d}.{end_time[3]:03d}', text)
+            
+            subs.captions.append(sub_item)
     
-    subs.save(output_file, encoding='utf-8')
+    start_time = convert_time(result[-1].start)
+    end_time = convert_time(result[-1].end)
+    text = result[-1].text
+    
+    if srt:    
+        subs.append(pysrt.SubRipItem(start=start_time, 
+                                        end=end_time, 
+                                        text=text))
+        
+        subs.save(output_file, encoding='utf-8')
+    else:
+        
+        subs.captions.append(Caption(
+        f'{start_time[0]:02d}:{start_time[1]:02d}:{start_time[2]:02d}.{start_time[3]:03d}',
+        f'{end_time[0]:02d}:{end_time[1]:02d}:{end_time[2]:02d}.{end_time[3]:03d}',
+        text))
+        
+        subs.save(output_file)
+        
     print(f'Subtitle file {output_file} is ready.') 
-                                
+
+
+
+
+                          
 def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False):         
     file_count = len(video_list)
     done = 0
@@ -71,7 +128,7 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
         
         if use_stable:
             if not plus_time:
-                if sub_extension == '.srt' or '.vtt':
+                if sub_extension == '.srt' or sub_extension == '.vtt':
                     result.to_srt_vtt(sub_file, tag=tag)
                     done += 1
                     print(f"{done}/{file_count}")
@@ -80,8 +137,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                     sys.exit()
             
             else:
-                if sub_extension == '.srt':
-                    stable_result_to_srt(result, sub_file, plus_time=plus_time)
+                if sub_extension == '.srt' or sub_extension == '.vtt':
+                    stable_result_to_srt_vtt(result, sub_file, plus_time=plus_time)
                     done += 1
                     print(f"{done}/{file_count}")
                 else:
@@ -89,8 +146,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                     sys.exit()
                 
         else:
-            if sub_extension == '.srt':
-                result_to_srt(result, sub_file, plus_time=plus_time)
+            if sub_extension == '.srt' or sub_extension == '.vtt':
+                result_to_srt_vtt(result, sub_file, plus_time=plus_time)
                 done += 1
                 print(f"{done}/{file_count}")
             else:
@@ -207,16 +264,8 @@ def main():
 
     model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
         
-    if sub_format == '.srt':   
-        tag = None if timestamps else ('<font color="#FFFFFF">', '</font>') 
-    else: 
-        tag = ('<u>', '</u>')
-    
-    #Temporary warning until vtt support for plus_time 
-    if sub_format == '.vtt' and (not use_stable or plus_time):
-        print("Creating .vtt files is only possible with stable models and without using offset at the moment. Use '-s' command to switch to stable models or use .srt instead.")
-        sys.exit()
-        
+    tag = ('<font color="#FFFFFF">', '</font>') if sub_format == '.srt' and not timestamps else None
+
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 

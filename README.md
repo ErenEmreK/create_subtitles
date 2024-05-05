@@ -1,12 +1,10 @@
 
-# Subtitle Creator
+# CreateSubtitles
 
 A command-line application to easily create subtitles for video/audio files using OpenAI's Whisper library.
 
 
-
-
-## Dependencies
+## Setup
 
 #### ffmpeg
 Whisper uses the brilliant command-line tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
@@ -28,18 +26,19 @@ You can install our main Speech to Text model [whisper](https://github.com/opena
 pip install openai-whisper
 ```
 
-#### pysrt
+#### pysrt and webvtt
 
-[Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files. Install with commands below:
+[Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
 
 ```
 pip install pysrt
+pip install webvtt-py
 ```
 
 ## Usage
 
 #### Important Update 1.01!!
-After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create efficient subtitles quickly using stable_whisper model, this is the way to go now:
+After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create more efficient subtitles quickly using stable_whisper model, this is the way to go now:
 
 Install stable-ts via:
 ```python
@@ -59,11 +58,11 @@ You can still use offset -more information below about how offset works- in orde
 ```python
 create_subtitles.py path/to/video.mkv -s -p 0.75
 ```
-You can use other commands too:
+You can still use other commands too, for example:
 ```python
-create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 0.5 -m base 
+create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 0.5 -m base -f .vtt
 ```
-#### If you still prefer legacy version: 
+#### If you still prefer legacy version (or want to have more information on other commands): 
 
 Basic usage requires only a video/audio file to create subtitles for.
 ```python
@@ -76,6 +75,10 @@ create_subtitles.py path/to/video/directory
 You can declare directory you want subtitles to be created in. (If you don't use -o arguement, it will save the subtitle files into the video directory by default.)
 ```python
 create_subtitles.py path/to/video.mp4 -o path/to/subtitle/directory
+```
+Default subtitle format is .srt but you can switch to .vtt by -f command:
+```python
+create_subtitles.py path/to/video/directory -o path/to/subtitle/directory -f .vtt
 ```
 -p arguement will add desired amount of (seconds) offset time to end of every subtitle instance. Since AI generated subtitle will exactly disappear when sentence is finished, it is recommended to use 0.5 to 1.5 second of offset. (If next subtitle instance comes too quickly it will keep the instance till the next one to ensure they won't crash.)
 ```python
