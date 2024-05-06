@@ -60,7 +60,7 @@ create_subtitles.py path/to/video.mkv -s -p 1
 ```
 You can still use other commands too, for example:
 ```python
-create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 0.75 -m base -f .vtt
+create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 1 -l german -m base 
 ```
 #### If you still prefer legacy version (or want to have more information on other commands): 
 
@@ -76,9 +76,11 @@ You can declare directory you want subtitles to be created in. (If you don't use
 ```python
 create_subtitles.py path/to/video.mp4 -o path/to/subtitle/directory
 ```
-Default subtitle format is .srt but you can switch to .vtt by -f command:
+Default subtitle format is .srt but you can switch to .vtt by -f command. And you can declare language with -l command. If you are sure from the language of your files, it is recommended to declare languages since it improves efficiency a lot:
 ```python
-create_subtitles.py path/to/video/directory -o path/to/subtitle/directory -f .vtt
+create_subtitles.py path/to/video/directory -o path/to/subtitle/directory -l french -f .vtt
+                                    or  
+create_subtitles.py path/to/video/directory -o path/to/subtitle/directory -l fr -f .srt
 ```
 -p arguement will add desired amount of (seconds) offset time to end of every subtitle instance. Since AI generated subtitle will exactly disappear when sentence is finished, it is recommended to use 0.5 to 1.5 second of offset. (If next subtitle instance comes too quickly it will keep the instance till the next one to ensure they won't crash.)
 ```python
