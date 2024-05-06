@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 import os
 
@@ -110,7 +112,7 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
         
     print(f'Subtitle file {output_file} is ready.') 
                          
-def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False):         
+def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
@@ -120,7 +122,7 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
         sub_file = os.path.join(sub_dir, sub_base_name)
         
         if use_stable:
-            result = model.transcribe(video_path, vad=vad)
+            result = model.transcribe(video_path, vad=vad, language=language)
             if refine:
                 result = model.refine(video_path, result)
                 
@@ -143,7 +145,7 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                     sys.exit()
                 
         else:
-            result = model.transcribe(video_path)
+            result = model.transcribe(video_path, language=language)
             
             if sub_extension == '.srt' or sub_extension == '.vtt':
                 result_to_srt_vtt(result, sub_file, plus_time=plus_time)
@@ -173,8 +175,9 @@ def commands(sys_args):
         timestamps = False
         refine = False
         vad = False
+        language = None
         
-        extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm']
+        extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
         sub_extensions = ['.srt', '.vtt']
         
         i = sys_args[1]
@@ -254,15 +257,24 @@ def commands(sys_args):
             
             elif sys_args[n] == "-v":
                 vad = True
+                
+            elif sys_args[n] == "-l":
+                try:
+                    language = sys_args[n + 1] 
+
+                except IndexError:
+                    print("Language keyword did not used properly. ")
+                    sys.exit()
+            
     else:
         print("You must enter an input path.")
         sys.exit()
         
-    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad
+    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language
     
 def main():
 
-    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad = commands(sys.argv)
+    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language = commands(sys.argv)
 
     model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
         
@@ -271,7 +283,7 @@ def main():
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
-                       use_stable=use_stable, vad=vad)
+                       use_stable=use_stable, vad=vad, language=language)
          
 if __name__ == '__main__':
     main()
