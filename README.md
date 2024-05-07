@@ -27,14 +27,15 @@ pip install -r requirements.txt
 <details>
     <summary>Or click here if you prefer to install them manually.</summary> 
 
-#### Whisper
+    #### Whisper
 
     You can install our main Speech to Text model [whisper](https://github.com/openai/whisper) via:
+
     ```
     pip install openai-whisper
     ```
 
-#### Pysrt and Webvtt
+    #### Pysrt and Webvtt
 
     [Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
 
@@ -42,7 +43,7 @@ pip install -r requirements.txt
     pip install pysrt
     pip install webvtt-py
     ```
-#### Requests
+    #### Requests
 
     [Requests](https://pypi.org/project/requests/) is used when creating subtitles with urls:
 
