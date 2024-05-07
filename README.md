@@ -6,7 +6,7 @@ A command-line application to easily create subtitles for video/audio files usin
 
 ## Setup
 
-#### ffmpeg
+#### Ffmpeg
 Whisper uses the brilliant command-line tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
 
 ```
@@ -19,28 +19,35 @@ choco install ffmpeg
 # on MacOS using Homebrew 
 brew install ffmpeg
 ```
-#### requirements
-You can install required python libraries with:
+#### Requirements
+You can install all required python libraries with:
 ```
 pip install -r requirements.txt
 ```
-
 <details>
     <summary>Or click here if you prefer to install them manually.</summary> 
 
 #### Whisper
-You can install our main Speech to Text model [whisper](https://github.com/openai/whisper) via:
+
+    You can install our main Speech to Text model [whisper](https://github.com/openai/whisper) via:
     ```
     pip install openai-whisper
     ```
 
-#### pysrt and webvtt
+#### Pysrt and Webvtt
 
     [Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
 
     ```
     pip install pysrt
     pip install webvtt-py
+    ```
+#### Requests
+
+    [Requests](https://pypi.org/project/requests/) is used when creating subtitles with urls:
+
+    ```
+    pip install requests
     ```
 
 </details>
