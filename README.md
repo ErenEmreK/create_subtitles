@@ -20,10 +20,9 @@ choco install ffmpeg
 brew install ffmpeg
 ```
 #### requirements
-You can install other required libraries with:
+You can install required python libraries with:
 ```
 pip install -r requirements.txt
-
 ```
 
 <details>
@@ -35,23 +34,14 @@ You can install our main Speech to Text model [whisper](https://github.com/opena
     pip install openai-whisper
     ```
 
-    ### pysrt and webvtt
+#### pysrt and webvtt
 
-    [Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
     [Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
 
     ```
     pip install pysrt
     pip install webvtt-py
     ```
-    ```
-    pip install pysrt
-    pip install webvtt-py
-    ```
-
-</details>
-
-
 
 </details>
 
