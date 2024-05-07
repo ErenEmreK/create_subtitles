@@ -19,28 +19,41 @@ choco install ffmpeg
 # on MacOS using Homebrew 
 brew install ffmpeg
 ```
+#### requirements
+You can install other required libraries with:
+```
+pip install -r requirements.txt
+
+```
+
+<details>
+    <summary>Or click here if you prefer to install them manually.</summary> 
 
 #### Whisper
 You can install our main Speech to Text model [whisper](https://github.com/openai/whisper) via:
-```
-pip install openai-whisper
-```
+    ```
+    pip install openai-whisper
+    ```
 
 #### pysrt and webvtt
 
-[Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
+    [Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
 
-```
-pip install pysrt
-pip install webvtt-py
-```
+    ```
+    pip install pysrt
+    pip install webvtt-py
+    ```
+
+</details>
+
+
 
 ## Usage
 
 #### Important Update 1.01!!
 After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create more efficient subtitles quickly using stable_whisper model, this is the way to go now:
 
-Install stable-ts via:
+Install stable-ts via (If you used requirements.txt to install dependencies, you don't need to do this step.):
 ```python
 pip install -U stable-ts
 ```
@@ -62,7 +75,7 @@ You can still use other commands too, for example:
 ```python
 create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 1 -l german -m base 
 ```
-#### If you still prefer legacy version (or want to have more information on other commands): 
+#### If you still prefer legacy version (or want to have more information about other commands): 
 
 Basic usage requires only a video/audio file to create subtitles for. Or you can use a video link that is readable by ffmpeg.
 ```python
