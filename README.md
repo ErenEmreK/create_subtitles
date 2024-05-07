@@ -60,11 +60,11 @@ pip install requests
 ### Important Update 1.01!!
 After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create more efficient subtitles quickly using stable_whisper model, this is the way to go now:
 
-Install stable-ts via (If you used requirements.txt to install dependencies, you don't need to do this step.):
+# Install stable-ts via (If you used requirements.txt to install dependencies, you don't need to do this step.):
 ```python
 pip install -U stable-ts
 ```
-Then use Subtitle Creator with -s command.
+Then use CreateSubtitles with -s command.
 ```python
 create_subtitles.py path/to/video.mp4 -s
                 or
