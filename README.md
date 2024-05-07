@@ -20,20 +20,27 @@ choco install ffmpeg
 brew install ffmpeg
 ```
 
-#### Whisper
-You can install our main Speech to Text model [whisper](https://github.com/openai/whisper) via:
-```
-pip install openai-whisper
-```
+<details>
+    <summary>If you prefer to install them manually: </summary> 
 
-#### pysrt and webvtt
+    ### Whisper
+    You can install our main Speech to Text model [whisper](https://github.com/openai/whisper) via:
+    ```
+    pip install openai-whisper
+    ```
 
-[Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
+    ### pysrt and webvtt
 
-```
-pip install pysrt
-pip install webvtt-py
-```
+    [Pysrt](https://github.com/byroot/pysrt) facilitates converting texts to srt files while [webvtt](https://webvtt-py.readthedocs.io/en/latest/usage.html) does the same for vtt files. Install them with commands below:
+
+    ```
+    pip install pysrt
+    pip install webvtt-py
+    ```
+
+</details>
+
+
 
 ## Usage
 
