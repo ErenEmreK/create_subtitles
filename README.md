@@ -57,7 +57,7 @@ pip install requests
 
 ## Usage
 
-#### Important Update 1.01!!
+### Important Update 1.01!!
 After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create more efficient subtitles quickly using stable_whisper model, this is the way to go now:
 
 Install stable-ts via (If you used requirements.txt to install dependencies, you don't need to do this step.):
@@ -82,7 +82,7 @@ You can still use other commands too, for example:
 ```python
 create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 1 -l german -m base 
 ```
-#### If you still prefer legacy version (or want to have more information about other commands): 
+### If you still prefer legacy version (or want to have more information about other commands): 
 
 Basic usage requires only a video/audio file to create subtitles for. Or you can use a video link that is readable by ffmpeg.
 ```python
