@@ -64,9 +64,11 @@ create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 1 -l ger
 ```
 #### If you still prefer legacy version (or want to have more information on other commands): 
 
-Basic usage requires only a video/audio file to create subtitles for.
+Basic usage requires only a video/audio file to create subtitles for. Or you can use a video link that is readable by ffmpeg.
 ```python
 create_subtitles.py path/to/video.mkv 
+                or
+create_subtitles.py https://www.youtube.com/watch?v=xvFZjo5PgG0    
 ```
 You can also just use a folder name instead, it will create subtitles for all available media files in that folder.
 ```python
