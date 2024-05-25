@@ -2,6 +2,7 @@
 
 import sys
 import os
+import argparse
 
 import requests
 import whisper
@@ -171,123 +172,51 @@ def commands(sys_args):
     
     if len(sys_args) >= 2:
         
-        if sys_args[1] == "-h":
-            print("Usage: create_subtitles.py [path/to/input/file.mp4 OR path/to/input/folder] -o [path/to/output/folder] -f [subtitle format] -p [plus time] -m [model size]")
-            print("Less verbose usage: create_subtitles.py [path/to/input/file.mp4 OR path/to/input/folder] -s")
-            print("Check https://github.com/ErenEmreK/create_subtitles")
-            #TODO be more verbose here
-            sys.exit()
-        
-        output_dir = os.getcwd()
-        plus_time = 0
-        sub_format = '.srt'
-        model_size = 'small'
-        input_list = []
-        use_stable = False
-        timestamps = False
-        refine = False
-        vad = False
-        language = None
-        is_url = False
-        
-        extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
-        sub_extensions = ['.srt', '.vtt']
-        
-        i = sys_args[1]
-        
-        if os.path.isfile(i):
-            #we set input folder as output folder by default 
-            output_dir = os.path.dirname(i)
-            input_list = [i]
-        
-        elif os.path.isdir(i):
-            #we set input folder as output folder by default 
-            output_dir = i
-            input_list = [os.path.join(i, file) for file in os.listdir(i) if os.path.splitext(file)[1] in extensions]
+        parser = argparse.ArgumentParser(
+        description="Create subtitles for video/audio files or a folder of such files."
+    )
+        parser.add_argument("input", help="Path to input file or folder, or URL")
+        parser.add_argument("-o", "--output", help="Path to output folder", default=None)
+        parser.add_argument("-f", "--format", help="Subtitle format", choices=['.srt', '.vtt'], default='.srt')
+        parser.add_argument("-p", "--plus-time", type=float, help="Additional time in seconds to add to subtitles", default=0)
+        parser.add_argument("-m", "--model", help="Model size", choices=['tiny', 'base', 'small', 'medium', 'large', 'tiny.en', 'base.en', 'small.en', 'medium.en', 'large.en'], default='small')
+        parser.add_argument("-s", "--stable", action="store_true", help="Use stable whisper model for better performance")
+        parser.add_argument("-t", "--timestamps", action="store_true", help="Include timestamps")
+        parser.add_argument("-r", "--refine", action="store_true", help="Refine subtitles")
+        parser.add_argument("-v", "--vad", action="store_true", help="Use VAD")
+        parser.add_argument("-l", "--language", help="Specify language")
 
-        elif check_link(i):
-            input_list = [i]
+        args = parser.parse_args(sys_args[1:])
+    
+        output_dir = os.getcwd()
+        input_list = []
+        is_url = False
+         
+        if os.path.isfile(args.input):
+            #we set input folder as output folder by default 
+            output_dir = args.output if args.output else os.path.dirname(args.input)
+            input_list = [args.input]
+        
+        elif os.path.isdir(args.input):
+            #we set input folder as output folder by default 
+            output_dir = args.output if args.output else args.input
+            extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
+    
+            input_list = [os.path.join(args.input, file) for file in os.listdir(args.input) if os.path.splitext(file)[1] in extensions]
+
+        elif check_link(args.input):
+            input_list = [args.input]
             is_url = True
             
         else:
-            print(f"Couldn't reach {i}")
+            print(f"Couldn't reach {args.input}")
             sys.exit()
             
-        for n in range(2, len(sys_args)):
-            if sys_args[n] == "-o":
-                try:
-                    requested_path = sys_args[n + 1] 
-                    if os.path.isdir(requested_path):
-                        output_dir = requested_path
-                    
-                    else:
-                        print("Requested output directory is invalid.")
-                        sys.exit()
-                
-                except IndexError:
-                    print("Output location isn't defined. Creating the files in video folder instead. ")
-                    pass
-                
-            elif sys_args[n] == "-f":
-                try:
-                    requested_format = sys_args[n + 1] 
-                    if requested_format in sub_extensions:
-                        sub_format = requested_format
-                    else:
-                        print("Unable to create requested subtitle format. Supported formats: " + str(sub_extensions))
-                        sys.exit()
-                except IndexError:
-                    pass
-    
-            elif sys_args[n] == "-p":
-                try:
-                    plus_time = float(sys_args[n + 1]) 
-                except (ValueError, IndexError):
-                    print("Plus-time didn't specified properly.")
-                    sys.exit()
-            
-            elif sys_args[n] == "-m":
-                model_size_names = ['tiny', 'base', 'small', 'medium', 'large', 'tiny.en',  
-                                    'base.en', 'small.en', 'medium.en', 'large.en']
-                try:
-                    requested_model = sys_args[n + 1] 
-                    if requested_model in model_size_names:
-                        model_size = requested_model
-                    else:
-                        print("Requested model is not valid.")
-                        print("Possible model names: " + str(model_size_names))
-                        sys.exit()
-                        
-                except IndexError:
-                    print("Model keyword did not used properly. ")
-                    print("Possible model keywords: " + str(model_size_names))
-                    sys.exit()
-            
-            elif sys_args[n] == "-s":
-                use_stable = True
-            
-            elif sys_args[n] == "-t":
-                timestamps = True
-            
-            elif sys_args[n] == "-r":
-                refine = True
-            
-            elif sys_args[n] == "-v":
-                vad = True
-                
-            elif sys_args[n] == "-l":
-                try:
-                    language = sys_args[n + 1] 
-
-                except IndexError:
-                    print("Language keyword did not used properly. ")
-                    sys.exit()
-            
-    else:
-        print("You must enter an input path.")
-        sys.exit()
+        if not os.path.isdir(output_dir):
+            print("Requested output directory is invalid.")
+            sys.exit()
         
-    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url
+    return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, is_url
     
 def main():
 
