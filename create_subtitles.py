@@ -1,11 +1,24 @@
+#!/usr/bin/env python
+
 import sys
 import os
 
+import requests
 import whisper
 import stable_whisper
 
 import pysrt
 from webvtt import WebVTT, Caption
+
+def check_link(link):
+    try:
+        r = requests.get(link)
+        if r.status_code == 200:
+            return True
+        else:
+            return False
+    except requests.exceptions.RequestException:
+        return False
 
 def convert_time(seconds):
 
@@ -109,24 +122,22 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
         subs.save(output_file)
         
     print(f'Subtitle file {output_file} is ready.') 
-
-
-
-
-                          
-def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False):         
+                         
+def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None, is_url=False):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
     for video_path in video_list:
-        result = model.transcribe(video_path)
-        if use_stable and refine:
-            result = model.refine(video_path, result)
-        
-        sub_base_name = os.path.splitext(os.path.basename(video_path))[0] + sub_extension
+          
+        sub_base_name = os.path.splitext(os.path.basename(video_path))[0] if not is_url else str(done)
+        sub_base_name += sub_extension
         sub_file = os.path.join(sub_dir, sub_base_name)
         
         if use_stable:
+            result = model.transcribe(video_path, vad=vad, language=language)
+            if refine:
+                result = model.refine(video_path, result)
+                
             if not plus_time:
                 if sub_extension == '.srt' or sub_extension == '.vtt':
                     result.to_srt_vtt(sub_file, tag=tag)
@@ -146,6 +157,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
                     sys.exit()
                 
         else:
+            result = model.transcribe(video_path, language=language)
+            
             if sub_extension == '.srt' or sub_extension == '.vtt':
                 result_to_srt_vtt(result, sub_file, plus_time=plus_time)
                 done += 1
@@ -165,7 +178,7 @@ def commands(sys_args):
             #TODO be more verbose here
             sys.exit()
         
-        output_dir = None
+        output_dir = os.getcwd()
         plus_time = 0
         sub_format = '.srt'
         model_size = 'small'
@@ -173,8 +186,11 @@ def commands(sys_args):
         use_stable = False
         timestamps = False
         refine = False
+        vad = False
+        language = None
+        is_url = False
         
-        extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm']
+        extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
         sub_extensions = ['.srt', '.vtt']
         
         i = sys_args[1]
@@ -188,7 +204,11 @@ def commands(sys_args):
             #we set input folder as output folder by default 
             output_dir = i
             input_list = [os.path.join(i, file) for file in os.listdir(i) if os.path.splitext(file)[1] in extensions]
-    
+
+        elif check_link(i):
+            input_list = [i]
+            is_url = True
+            
         else:
             print(f"Couldn't reach {i}")
             sys.exit()
@@ -251,16 +271,27 @@ def commands(sys_args):
             
             elif sys_args[n] == "-r":
                 refine = True
-              
+            
+            elif sys_args[n] == "-v":
+                vad = True
+                
+            elif sys_args[n] == "-l":
+                try:
+                    language = sys_args[n + 1] 
+
+                except IndexError:
+                    print("Language keyword did not used properly. ")
+                    sys.exit()
+            
     else:
         print("You must enter an input path.")
         sys.exit()
         
-    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine
+    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url
     
 def main():
 
-    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine = commands(sys.argv)
+    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url = commands(sys.argv)
 
     model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
         
@@ -269,8 +300,7 @@ def main():
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
-                       use_stable=use_stable)
-       
-    
+                       use_stable=use_stable, vad=vad, language=language, is_url=is_url)
+         
 if __name__ == '__main__':
     main()
