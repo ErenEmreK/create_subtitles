@@ -1,7 +1,7 @@
 
 # CreateSubtitles
 
-A command-line application to easily create subtitles for video/audio files using OpenAI's Whisper library.
+A command-line application to easily create subtitles for video/audio files and urls (such as youtube and dailymotion) using OpenAI's Whisper Speech to Text model.
 
 
 ## Setup
@@ -43,12 +43,13 @@ pip install openai-whisper
 pip install pysrt
 pip install webvtt-py
 ```
-#### Requests
+#### Validators and yt-dlp
 
-[Requests](https://pypi.org/project/requests/) is used when creating subtitles with urls:
+[Validators](https://pypi.org/project/validators/) is used when creating subtitles with urls, and [yt-dlp](https://pypi.org/project/yt-dlp/) when pulling videos from youtube or dailymotion:
 
 ```
-pip install requests
+pip install validators
+pip install yt-dlp
 ```
 
 </details>
@@ -70,6 +71,15 @@ create_subtitles.py path/to/video.mp4 -s
                 or
 create_subtitles.py path/to/video/folder -s
 ```
+You can create subtitles for video/playlist url's too with this model:
+```python
+create_subtitles.py "https://www.youtube.com/watch?v=xvFZjo5PgG0&ab_channel=Duran" -s
+                or
+create_subtitles.py "https://www.youtube.com/playlist?list=PL_VCREGnvRpcq2Eh4cuo1JZcg7iKh_J2W" -s 
+                or
+create_subtitles.py https://www.dailymotion.com/playlist/x4yhya -s -l french
+```
+
 And if you want to use timestamps for active words:
 ```python
 create_subtitles.py path/to/video.mkv -s -t
@@ -84,16 +94,13 @@ create_subtitles.py path/to/video.mkv -o  path/to/subtitle/folder -s -p 1 -l ger
 ```
 ### If you still prefer legacy version (or want to have more information about other commands): 
 
-Basic usage requires only a video/audio file to create subtitles for. Or you can use a video link that is readable by ffmpeg.
+Basic usage requires only a video/audio file to create subtitles for, or you can also just use a folder name instead, it will create subtitles for all available media files in that folder.
 ```python
 create_subtitles.py path/to/video.mkv 
                 or
-create_subtitles.py https://www.youtube.com/watch?v=xvFZjo5PgG0    
+create_subtitles.py path/to/video/directory   
 ```
-You can also just use a folder name instead, it will create subtitles for all available media files in that folder.
-```python
-create_subtitles.py path/to/video/directory
-```
+
 You can declare directory you want subtitles to be created in. (If you don't use -o arguement, it will save the subtitle files into the video directory by default.)
 ```python
 create_subtitles.py path/to/video.mp4 -o path/to/subtitle/directory
