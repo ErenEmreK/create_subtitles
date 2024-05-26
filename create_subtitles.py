@@ -4,22 +4,32 @@ import sys
 import os
 import argparse
 
-import requests
+import validators
 import whisper
 import stable_whisper
+import yt_dlp
+from yt_dlp.utils import DownloadError
 
 import pysrt
 from webvtt import WebVTT, Caption
 
-def check_link(link):
-    try:
-        r = requests.get(link)
-        if r.status_code == 200:
-            return True
+
+def get_video_links(url):
+    #supports yt and dailymotion
+    
+    ydl_opts = {
+        'quiet': True,
+        'extract_flat': True, 
+        'no_warnings': True 
+    }
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(url, download=False)
+        if 'entries' in result:
+            video_urls = [entry['url'] for entry in result['entries']]
+            return video_urls
         else:
-            return False
-    except requests.exceptions.RequestException:
-        return False
+            return []
 
 def convert_time(seconds):
 
@@ -203,20 +213,29 @@ def commands(sys_args):
             extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
     
             input_list = [os.path.join(args.input, file) for file in os.listdir(args.input) if os.path.splitext(file)[1] in extensions]
-
-        elif check_link(args.input):
-            input_list = [args.input]
+ 
+        elif validators.url(args.input):
+            try:
+                input_list = get_video_links(args.input)
+            except DownloadError as e:
+                input_list = []
+            
+            if not input_list:
+                input_list = [args.input]
+                
             is_url = True
-            
+        
         else:
-            print(f"Couldn't reach {args.input}")
+            print("Couldn't reach out to requested input path.")
             sys.exit()
-            
+        
         if not os.path.isdir(output_dir):
             print("Requested output directory is invalid.")
             sys.exit()
         
-    return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, is_url
+        return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, is_url
+    
+    sys.exit("Visit https://github.com/ErenEmreK/create_subtitles for usage instructions.")
     
 def main():
 
