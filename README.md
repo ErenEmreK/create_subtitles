@@ -11,7 +11,7 @@ python create_subtitles.py "C:\myGermanMovieFolder" -s -v -p 1.0 -l german
 ```
 or if you are much of a youtube person:
 ```PS
-python create_subtitles.py "https://www.youtube.com/playlist?list=PL_VCREGnvRpdVR6B7NdI5Fxelys3QKPgU" -o "C:\myGermanSubtitleFolder" -s -v -p 1.0 -l german
+python create_subtitles.py "https://www.youtube.com/playlist?list=PL_VCREGnvRpdVR6B7NdI5Fxelys3QKPgU" -s -v -p 1.0 -l german
 ```
 
 (Don't forget to change the 'german' keyword with the language your videos are in!)
