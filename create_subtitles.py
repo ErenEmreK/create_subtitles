@@ -227,12 +227,12 @@ def commands(sys_args):
          
         if os.path.isfile(args.input):
             #we set input folder as output folder by default 
-            output_dir = args.output if args.output else os.path.dirname(args.input)
+            output_dir = os.path.dirname(args.input)
             input_list = [args.input]
         
         elif os.path.isdir(args.input):
             #we set input folder as output folder by default 
-            output_dir = args.output if args.output else args.input
+            output_dir = args.input
             extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
     
             input_list = [os.path.join(args.input, file) for file in os.listdir(args.input) if os.path.splitext(file)[1] in extensions]
@@ -248,6 +248,9 @@ def commands(sys_args):
         else:
             print("Couldn't reach out to requested input path.")
             sys.exit()
+        
+        if args.output:
+            output_dir = args.output
         
         if not os.path.isdir(output_dir):
             print("Requested output directory is invalid.")
