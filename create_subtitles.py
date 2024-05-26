@@ -134,7 +134,7 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
         
     print(f'Subtitle file {output_file} is ready.') 
                          
-def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None, is_url=False):         
+def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None, is_url=False, dont_overwrite=False):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
@@ -143,7 +143,10 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
         sub_base_name = os.path.splitext(os.path.basename(video_path))[0] if not is_url else str(done)
         sub_base_name += sub_extension
         sub_file = os.path.join(sub_dir, sub_base_name)
-        
+        if dont_overwrite and os.path.exists(sub_file):
+            print(f"{sub_file} already exists. Skipping...")
+            continue
+            
         if use_stable:
             result = model.transcribe(video_path, vad=vad, language=language)
             if refine:
@@ -195,7 +198,8 @@ def commands(sys_args):
         parser.add_argument("-r", "--refine", action="store_true", help="Refine subtitles")
         parser.add_argument("-v", "--vad", action="store_true", help="Use VAD")
         parser.add_argument("-l", "--language", help="Specify language")
-
+        parser.add_argument("--dont-overwrite", action="store_true", help="Use if you don't want to replace existing subtitles.", default=False)
+        
         args = parser.parse_args(sys_args[1:])
     
         output_dir = os.getcwd()
@@ -233,13 +237,13 @@ def commands(sys_args):
             print("Requested output directory is invalid.")
             sys.exit()
         
-        return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, is_url
+        return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, is_url, args.dont_overwrite
     
     sys.exit("Visit https://github.com/ErenEmreK/create_subtitles for usage instructions.")
     
 def main():
 
-    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url = commands(sys.argv)
+    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url, dont_overwrite = commands(sys.argv)
 
     model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
         
@@ -248,7 +252,7 @@ def main():
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
-                       use_stable=use_stable, vad=vad, language=language, is_url=is_url)
+                       use_stable=use_stable, vad=vad, language=language, is_url=is_url, dont_overwrite=dont_overwrite)
          
 if __name__ == '__main__':
     main()
