@@ -2,23 +2,34 @@
 
 import sys
 import os
+import argparse
 
-import requests
+import validators
 import whisper
 import stable_whisper
+import yt_dlp
+from yt_dlp.utils import DownloadError
 
 import pysrt
 from webvtt import WebVTT, Caption
 
-def check_link(link):
-    try:
-        r = requests.get(link)
-        if r.status_code == 200:
-            return True
+
+def get_video_links(url):
+    #supports yt and dailymotion
+    
+    ydl_opts = {
+        'quiet': True,
+        'extract_flat': True, 
+        'no_warnings': True 
+    }
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        result = ydl.extract_info(url, download=False)
+        if 'entries' in result:
+            video_urls = [entry['url'] for entry in result['entries']]
+            return video_urls
         else:
-            return False
-    except requests.exceptions.RequestException:
-        return False
+            return []
 
 def convert_time(seconds):
 
@@ -123,7 +134,7 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
         
     print(f'Subtitle file {output_file} is ready.') 
                          
-def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None, is_url=False):         
+def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None, is_url=False, dont_overwrite=False):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
@@ -132,7 +143,10 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
         sub_base_name = os.path.splitext(os.path.basename(video_path))[0] if not is_url else str(done)
         sub_base_name += sub_extension
         sub_file = os.path.join(sub_dir, sub_base_name)
-        
+        if dont_overwrite and os.path.exists(sub_file):
+            print(f"{sub_file} already exists. Skipping...")
+            continue
+            
         if use_stable:
             result = model.transcribe(video_path, vad=vad, language=language)
             if refine:
@@ -171,127 +185,65 @@ def commands(sys_args):
     
     if len(sys_args) >= 2:
         
-        if sys_args[1] == "-h":
-            print("Usage: create_subtitles.py [path/to/input/file.mp4 OR path/to/input/folder] -o [path/to/output/folder] -f [subtitle format] -p [plus time] -m [model size]")
-            print("Less verbose usage: create_subtitles.py [path/to/input/file.mp4 OR path/to/input/folder] -s")
-            print("Check https://github.com/ErenEmreK/create_subtitles")
-            #TODO be more verbose here
-            sys.exit()
+        parser = argparse.ArgumentParser(
+        description="Create subtitles for video/audio files or a folder of such files."
+    )
+        parser.add_argument("input", help="Path to input file or folder, or URL")
+        parser.add_argument("-o", "--output", help="Path to output folder", default=None)
+        parser.add_argument("-f", "--format", help="Subtitle format", choices=['.srt', '.vtt'], default='.srt')
+        parser.add_argument("-p", "--plus-time", type=float, help="Additional time in seconds to add to subtitles", default=0)
+        parser.add_argument("-m", "--model", help="Model size", choices=['tiny', 'base', 'small', 'medium', 'large', 'tiny.en', 'base.en', 'small.en', 'medium.en', 'large.en'], default='small')
+        parser.add_argument("-s", "--stable", action="store_true", help="Use stable whisper model for better performance")
+        parser.add_argument("-t", "--timestamps", action="store_true", help="Include timestamps")
+        parser.add_argument("-r", "--refine", action="store_true", help="Refine subtitles")
+        parser.add_argument("-v", "--vad", action="store_true", help="Use VAD")
+        parser.add_argument("-l", "--language", help="Specify language")
+        parser.add_argument("--dont-overwrite", action="store_true", help="Use if you don't want to replace existing subtitles.", default=False)
         
-        output_dir = os.getcwd()
-        plus_time = 0
-        sub_format = '.srt'
-        model_size = 'small'
-        input_list = []
-        use_stable = False
-        timestamps = False
-        refine = False
-        vad = False
-        language = None
-        is_url = False
-        
-        extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
-        sub_extensions = ['.srt', '.vtt']
-        
-        i = sys_args[1]
-        
-        if os.path.isfile(i):
-            #we set input folder as output folder by default 
-            output_dir = os.path.dirname(i)
-            input_list = [i]
-        
-        elif os.path.isdir(i):
-            #we set input folder as output folder by default 
-            output_dir = i
-            input_list = [os.path.join(i, file) for file in os.listdir(i) if os.path.splitext(file)[1] in extensions]
-
-        elif check_link(i):
-            input_list = [i]
-            is_url = True
-            
-        else:
-            print(f"Couldn't reach {i}")
-            sys.exit()
-            
-        for n in range(2, len(sys_args)):
-            if sys_args[n] == "-o":
-                try:
-                    requested_path = sys_args[n + 1] 
-                    if os.path.isdir(requested_path):
-                        output_dir = requested_path
-                    
-                    else:
-                        print("Requested output directory is invalid.")
-                        sys.exit()
-                
-                except IndexError:
-                    print("Output location isn't defined. Creating the files in video folder instead. ")
-                    pass
-                
-            elif sys_args[n] == "-f":
-                try:
-                    requested_format = sys_args[n + 1] 
-                    if requested_format in sub_extensions:
-                        sub_format = requested_format
-                    else:
-                        print("Unable to create requested subtitle format. Supported formats: " + str(sub_extensions))
-                        sys.exit()
-                except IndexError:
-                    pass
+        args = parser.parse_args(sys_args[1:])
     
-            elif sys_args[n] == "-p":
-                try:
-                    plus_time = float(sys_args[n + 1]) 
-                except (ValueError, IndexError):
-                    print("Plus-time didn't specified properly.")
-                    sys.exit()
-            
-            elif sys_args[n] == "-m":
-                model_size_names = ['tiny', 'base', 'small', 'medium', 'large', 'tiny.en',  
-                                    'base.en', 'small.en', 'medium.en', 'large.en']
-                try:
-                    requested_model = sys_args[n + 1] 
-                    if requested_model in model_size_names:
-                        model_size = requested_model
-                    else:
-                        print("Requested model is not valid.")
-                        print("Possible model names: " + str(model_size_names))
-                        sys.exit()
-                        
-                except IndexError:
-                    print("Model keyword did not used properly. ")
-                    print("Possible model keywords: " + str(model_size_names))
-                    sys.exit()
-            
-            elif sys_args[n] == "-s":
-                use_stable = True
-            
-            elif sys_args[n] == "-t":
-                timestamps = True
-            
-            elif sys_args[n] == "-r":
-                refine = True
-            
-            elif sys_args[n] == "-v":
-                vad = True
-                
-            elif sys_args[n] == "-l":
-                try:
-                    language = sys_args[n + 1] 
-
-                except IndexError:
-                    print("Language keyword did not used properly. ")
-                    sys.exit()
-            
-    else:
-        print("You must enter an input path.")
-        sys.exit()
+        output_dir = os.getcwd()
+        input_list = []
+        is_url = False
+         
+        if os.path.isfile(args.input):
+            #we set input folder as output folder by default 
+            output_dir = args.output if args.output else os.path.dirname(args.input)
+            input_list = [args.input]
         
-    return model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url
+        elif os.path.isdir(args.input):
+            #we set input folder as output folder by default 
+            output_dir = args.output if args.output else args.input
+            extensions = ['.mp4', '.mkv', '.mp3', '.wav', '.mpeg', '.m4a', '.webm', '.avi']
+    
+            input_list = [os.path.join(args.input, file) for file in os.listdir(args.input) if os.path.splitext(file)[1] in extensions]
+ 
+        elif validators.url(args.input):
+            try:
+                input_list = get_video_links(args.input)
+            except DownloadError as e:
+                input_list = []
+            
+            if not input_list:
+                input_list = [args.input]
+                
+            is_url = True
+        
+        else:
+            print("Couldn't reach out to requested input path.")
+            sys.exit()
+        
+        if not os.path.isdir(output_dir):
+            print("Requested output directory is invalid.")
+            sys.exit()
+        
+        return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, is_url, args.dont_overwrite
+    
+    sys.exit("Visit https://github.com/ErenEmreK/create_subtitles for usage instructions.")
     
 def main():
 
-    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url = commands(sys.argv)
+    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, is_url, dont_overwrite = commands(sys.argv)
 
     model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
         
@@ -300,7 +252,7 @@ def main():
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
-                       use_stable=use_stable, vad=vad, language=language, is_url=is_url)
+                       use_stable=use_stable, vad=vad, language=language, is_url=is_url, dont_overwrite=dont_overwrite)
          
 if __name__ == '__main__':
     main()
