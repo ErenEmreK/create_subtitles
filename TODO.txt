@@ -1,7 +1,0 @@
-O Extract video urls from playlist and create results
-O Create translations -->You may handle this after handling translation api
-ffsubsync integration for synching subs
-
-First:
-	Remove unnecessary srt whitefonting
-	Migrate to command line libs
