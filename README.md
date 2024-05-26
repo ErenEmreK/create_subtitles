@@ -4,7 +4,7 @@
 A command-line application to easily create subtitles for video/audio files and urls (such as youtube and dailymotion) using OpenAI's Whisper Speech to Text model.
 
 # TL;DR ✌️
-If you say: "I don't want to bother reading just tell me the easiest usage style to create quality captions", in Powershell:
+If you say: "I don't want to bother reading just tell me the easiest usage style to create quality captions":
  
 ```PS
 python create_subtitles.py "C:\myGermanMovieFolder" -s -v -p 1.0 -l german
@@ -18,7 +18,7 @@ python create_subtitles.py "https://www.youtube.com/playlist?list=PL_VCREGnvRpdV
 ## Setup
 
 #### Ffmpeg
-Whisper uses the brilliant command-line tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
+Whisper uses the brilliant multimedia tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
 
 ```
 # on Ubuntu
