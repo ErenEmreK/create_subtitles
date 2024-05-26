@@ -122,3 +122,8 @@ Since bigger models consume considerably more VRAM, be sure your GPU is up to ta
 ```python
 create_subtitles.py path/to/video/folder -p 0.75 -m small 
 ```
+
+If you want to avoid replacing already existing subtitles -that being subtitle with the same basename as input file and intended sub extension- You can do it via 'dont-overwrite' command. This comes handy if you don't want to create all subtitles at once while dealing with larger folders. 
+```python
+create_subtitles.py path/to/video/folder -p 1 -spanish --dont-overwrite
+```
