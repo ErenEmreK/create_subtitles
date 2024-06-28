@@ -1,7 +1,7 @@
 
 # CreateSubtitles
 
-A command-line application that uses OpenAI's Whisper Speech to Text model to easily create subtitles for video/audio files and urls, such as youtube and dailymotion. ([Click here](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md) to see all supported websites.)
+A command-line application that uses OpenAI's Whisper Speech to Text model to easily create subtitles for video/audio files and urls, such as youtube, dailymotion or VK. ([Click here](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md) to see all supported websites.)
 
 # TL;DR ✌️
 If you say: "I don't want to bother reading just tell me the easiest usage style to create quality captions":

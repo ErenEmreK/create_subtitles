@@ -13,7 +13,7 @@ from yt_dlp.utils import DownloadError
 import pysrt
 from webvtt import WebVTT, Caption
 
-
+from concat_sentences import concat_srt_vtt
 
 
 def get_video_links(url):
@@ -152,7 +152,7 @@ def stable_result_to_srt_vtt(result, output_file, plus_time=0):
         
     print(f'Subtitle file {output_file} is ready.') 
                          
-def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None, url_title_list=[], dont_overwrite=False):         
+def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_time=0, refine=False, tag=('<font color="#FFFFFF">', '</font>'), use_stable=False, vad=False, language=None, url_title_list=[], dont_overwrite=False, concat=False):         
     file_count = len(video_list)
     done = 0
     print(f"Creating subtitles for {file_count} files. This may take a while...")
@@ -174,6 +174,7 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
             if not plus_time:
                 if sub_extension == '.srt' or sub_extension == '.vtt':
                     result.to_srt_vtt(sub_file, tag=tag)
+                    
                     done += 1
                     print(f"{done}/{file_count}")
                 else:
@@ -183,6 +184,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
             else:
                 if sub_extension == '.srt' or sub_extension == '.vtt':
                     stable_result_to_srt_vtt(result, sub_file, plus_time=plus_time)
+                    if concat:
+                        concat_srt_vtt(sub_file)
                     done += 1
                     print(f"{done}/{file_count}")
                 else:
@@ -194,6 +197,8 @@ def subtitles_for_list(model, video_list, sub_dir, sub_extension='.srt', plus_ti
             
             if sub_extension == '.srt' or sub_extension == '.vtt':
                 result_to_srt_vtt(result, sub_file, plus_time=plus_time)
+                if concat:
+                    concat_srt_vtt(sub_file)
                 done += 1
                 print(f"{done}/{file_count}")
             else:
@@ -218,6 +223,7 @@ def commands(sys_args):
         parser.add_argument("-v", "--vad", action="store_true", help="Use VAD")
         parser.add_argument("-l", "--language", help="Specify language")
         parser.add_argument("--dont-overwrite", action="store_true", help="Use if you don't want to replace existing subtitles.", default=False)
+        parser.add_argument("--concat", action="store_true", help="Use if you want to concatenate uncompleted sentences.", default=False)
         
         args = parser.parse_args(sys_args[1:])
     
@@ -256,13 +262,13 @@ def commands(sys_args):
             print("Requested output directory is invalid.")
             sys.exit()
         
-        return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, url_title_list, args.dont_overwrite
+        return args.model, input_list, output_dir, args.format, args.plus_time, args.stable, args.timestamps, args.refine, args.vad, args.language, url_title_list, args.dont_overwrite, args.concat
     
     sys.exit("Visit https://github.com/ErenEmreK/create_subtitles for usage instructions.")
     
 def main():
 
-    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, url_title_list, dont_overwrite = commands(sys.argv)
+    model_size, input_list, output_dir, sub_format, plus_time, use_stable, timestamps, refine, vad, language, url_title_list, dont_overwrite, concat = commands(sys.argv)
 
     model = stable_whisper.load_model(model_size) if use_stable else whisper.load_model(model_size)
         
@@ -271,7 +277,9 @@ def main():
     subtitles_for_list(model, input_list, output_dir, 
                        sub_extension=sub_format, plus_time=plus_time, 
                        refine=refine, tag=tag, 
-                       use_stable=use_stable, vad=vad, language=language, url_title_list=url_title_list, dont_overwrite=dont_overwrite)
+                       use_stable=use_stable, vad=vad, language=language, 
+                       url_title_list=url_title_list, dont_overwrite=dont_overwrite, 
+                       concat=concat)
          
 if __name__ == '__main__':
     main()
