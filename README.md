@@ -1,13 +1,24 @@
 
 # CreateSubtitles
 
-A command-line application to easily create subtitles for video/audio files and urls (such as youtube and dailymotion) using OpenAI's Whisper Speech to Text model.
+A command-line application that uses OpenAI's Whisper Speech to Text model to easily create subtitles for video/audio files and urls, such as youtube and dailymotion. ([Click here](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md) to see all supported websites.)
 
+# TL;DR ✌️
+If you say: "I don't want to bother reading just tell me the easiest usage style to create quality captions":
+ 
+```PS
+python create_subtitles.py "C:\myGermanMovieFolder" -s -v -p 1.0 -l german
+```
+or if you are much of a youtube person:
+```PS
+python create_subtitles.py "https://www.youtube.com/playlist?list=PL_VCREGnvRpdVR6B7NdI5Fxelys3QKPgU" -s -v -p 1.0 -l german
+```
 
+(Don't forget to change the 'german' keyword with the language your videos are in!)
 ## Setup
 
 #### Ffmpeg
-Whisper uses the brilliant command-line tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
+Whisper uses the brilliant multimedia tool [ffmpeg](https://ffmpeg.org/) in order to manipulate media files. You can install it via commands below in case you don't have already. Also keep in mind that you may need to add it to PATH afterwards.
 
 ```
 # on Ubuntu
@@ -57,7 +68,7 @@ pip install yt-dlp
 
 
 ## Usage
-
+![Usage Example](usage_example.png)
 ### Important Update 1.01!!
 After discovering wonderful Python library [stable-ts](https://github.com/jianfch/stable-ts) i did some updates in order to be able work with its improved model. So if you want to create more efficient subtitles quickly using stable_whisper model, this is the way to go now:
 
