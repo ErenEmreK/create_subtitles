@@ -1,8 +1,0 @@
-CreateSubtitles
-*A command-line application that can produces subtitles for media files using OpenAI's Whisper Speech to Text model.
-*It supports different subtitle formats and provides some degree of customization. More info on: link 
-
-use links
-
-
-fix javascript
